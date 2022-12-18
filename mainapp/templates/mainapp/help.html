@@ -1,0 +1,106 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Donation Page</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-white bg-white mb-3">
+        <a class="navbar-brand text-dark" href="{% url 'home' %}">
+            <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" width="40"
+                height="40" class="d-inline-block align-top " alt="Logo">
+            Himalayan Yeti Foundation
+        </a>
+
+        <form class="form-inline my-2 my-lg-0 ">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+
+    </nav>
+
+    <div class="text-center mt-3">
+        <h4>All resources for Help Center</h4>
+        <hr size="3" width="90%">
+    </div>
+
+
+    <div class=" container " style="width: auto;">
+
+        <div class="row my-4 border border-dark p-3" style="height:auto; ">
+
+
+
+            <div class="  col mt-4" >
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+            <div class="col mr-3 ">
+                <img src="{% static 'img\help.jpg' %}" class="card-img float-right" alt="..." style="width: 20rem;">
+            </div>
+
+        </div>
+
+
+        <div class="row my-4 border border-dark p-3" style="height:auto; ">
+
+
+
+            <div class="  col mt-4" >
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+            <div class="col mr-3 ">
+                <img src="{% static 'img\help.jpg' %}" class="card-img float-right" alt="..." style="width: 20rem;">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
