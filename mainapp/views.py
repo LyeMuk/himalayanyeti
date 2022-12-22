@@ -56,4 +56,11 @@ def createuser(request):
 
 
 def addarticle(request):
-    return render(request, "mainapp/addarticle.html")
+    contex={}
+    formarticle = articleform()
+    contex['formarticle']=formarticle
+    return render(request, "mainapp/addarticle.html", contex)
+
+
+def about(request):
+    return render(request, "mainapp/about.html")
