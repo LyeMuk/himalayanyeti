@@ -18,7 +18,7 @@ def help(request):
     contex={}
     object_list = article.objects.all()
     page_num = request.GET.get('page', 1)
-    paginator = Paginator(object_list, 6) # 6 employees per page
+    paginator = Paginator(object_list, 6) # 6 article per page
     try:
         page_obj = paginator.page(page_num)
     except PageNotAnInteger:
@@ -53,3 +53,7 @@ def userlogout(request):
 
 def createuser(request):
     pass
+
+
+def addarticle(request):
+    return render(request, "mainapp/addarticle.html")
