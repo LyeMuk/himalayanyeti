@@ -236,6 +236,13 @@
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Team</a></li>
                             <li><a href="#">Contact</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'createuser' %}">Create User</a></li>
+                            <li><a href="{% url 'userlogout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            {% endif %}
+
                         </ul>
                     </div>
                 </div>
