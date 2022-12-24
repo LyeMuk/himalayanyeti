@@ -48,7 +48,6 @@
 }
 
 .navbar .list ul li a {
-  font-family: "Montserrat", sans-serif;
   color: #000000;
   text-transform: capitalize;
   font-weight: 600;
@@ -60,14 +59,9 @@
 .navbar .list ul li a:hover {
   color: #ffb703;
 }
-.box{
-	height:680px;
-	background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("mountain.jpg");
-	background-repeat:no-repeat;
-	background-size:100% auto;
-	background-size:100% 680px;
-	color:white;	
-}
+
+
+
 
 .content{
 	padding:60px 50px 0px 50px;
@@ -78,7 +72,7 @@
 }
 .info{
 	margin-top:22px;
-	width:700px;
+	width:50%;
 	float:right;
 	margin-right:150px;
 }

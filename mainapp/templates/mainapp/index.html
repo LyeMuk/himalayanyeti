@@ -5,10 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Himalayan Yeti Foundation</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}" >
 </head>
 
@@ -24,13 +24,12 @@
 
         <div class="list">
             <input type="text" placeholder="Type to search">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'help' %}">Help</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="">Contact</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="">Contact</a></li>
         </div>
     </nav>
-    
     <!-- slider carousel section -->
     <section class="slider">
         <div class="container">
@@ -54,95 +53,53 @@
     </section>
 
 
-    <!-- gallery section -->
-    <section class="section gallery">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="section-title text-center">
-                        <span class="text-color">Our Gallery</span>
-                        <h2 class="mt-3 mb-4 position-relative content-title">Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Officia.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="container">
-            <div class="gallery-wrap">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/1.jpg" class="gallery-popup">
-                                <img src="images/gallery/1.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/2.jpg" class="gallery-popup">
-                                <img src="images/gallery/2.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/3.jpg" class="gallery-popup">
-                                <img src="images/gallery/3.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/4.jpg" class="gallery-popup">
-                                <img src="images/gallery/4.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/5.jpg" class="gallery-popup">
-                                <img src="images/gallery/5.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                            <a href="images/gallery/6.jpg" class="gallery-popup">
-                                <img src="images/gallery/6.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="gallery-item">
-                            <a href="images/gallery/9.jpg" class="gallery-popup">
-                                <img src="images/gallery/9.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="gallery-item">
-                            <a href="images/gallery/8.jpg" class="gallery-popup">
-                                <img src="images/gallery/8.jpg" alt="" class="img-fluid w-100">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </section>
-
-    <!-- news section -->
-    <section class="section causes">
+    <!-- latest section -->
+    <section class="section latest">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7 col-md-7">
                     <div class="section-title text-center">
-                        <span class="text-color">Latest Events</span>
-                        <h2 class="mt-3 mb-4 position-relative content-title">Lorem ipsum dolor sit.</h2>
-                        <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, maxime earum
-                            rem eos dolor voluptates!</p>
+                        <span class="heading">Latest Events</span>
+                        <!-- <h2 class="mt-3 mb-4 position-relative content-title">Lorem ipsum dolor sit.</h2> -->
+                        <!-- <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, maxime earum
+                            rem eos dolor voluptates!</p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="card mb-3 cause-item">
+                        <div class="row no-gutters notify">
+                            <!-- <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="..."> -->
+
+                            <div class="card-body">
+                                <h3 class="mb-3">To get notify of the Latest Events please enter your email address and
+                                    click on subscribe button.</h3>
+                                <input type="email" placeholder="Enter your Email" class="input-email">
+
+                                <a href="" class="btn btn-main rounded">Subscibe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card mb-3 cause-item">
+                        <div class="row no-gutters">
+                            <!-- <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="..."> -->
+
+                            <div class="card-body">
+                                <h3 class="mb-3">Lorem, ipsum dolor.</h3>
+                                <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                                    fugiat necessitatibus molestias quaerat, earum consequuntur!
+                                </p>
+
+                                <!-- <a href="donation.html" class="btn btn-main rounded">Donate Now</a> -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,14 +108,15 @@
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg" class="img-fluid w-100" alt="...">
+                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="...">
 
                             <div class="card-body">
                                 <h3 class="mb-3">Lorem, ipsum dolor.</h3>
                                 <p class="card-text mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
                                     vel dmnfsdn dnf?.</p>
 
-                                <a href="{% url 'donation' %}" class="btn btn-main rounded">Donate Now</a>
+                                <!-- <a href="" class="btn btn-main rounded">Donate Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -167,7 +125,8 @@
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg" class="img-fluid w-100" alt="...">
+                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="...">
 
                             <div class="card-body">
                                 <h3 class="mb-3">Lorem, ipsum dolor.</h3>
@@ -175,7 +134,7 @@
                                     fugiat necessitatibus molestias quaerat, earum consequuntur!
                                 </p>
 
-                                <a href="{% url 'donation' %}" class="btn btn-main rounded">Donate Now</a>
+                                <!-- <a href="donation.html" class="btn btn-main rounded">Donate Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -184,7 +143,8 @@
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg" class="img-fluid w-100" alt="...">
+                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="...">
 
                             <div class="card-body">
                                 <h3 class="mb-3">Lorem, ipsum dolor.</h3>
@@ -192,13 +152,103 @@
                                 <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Quaerat expedita totam maiores similique, minima cupiditate.</p>
 
-                                <a href="{% url 'donation' %}" class="btn btn-main rounded">Donate Now</a>
+                                <!-- <a href="donation.html" class="btn btn-main rounded">Donate Now</a> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- separator -->
+    <div class="line">
+    </div>
+    <!-- urgency section -->
+    <section class="section urgency">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="section-title text-center">
+                        <span class="heading">The Urgency</span>
+                        <!-- <h2 class="mt-3 mb-4 position-relative content-title">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Officia.</h2> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row1 left-border">
+                <div class="col-lg-5">
+                    <div class="card mb-3 cause-item">
+                        <div class="row no-gutters">
+                            <!-- <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="..."> -->
+
+                            <div class="card-body cb1">
+                                <h1 class="mb-3">Climate Crisis</h3>
+                                    <p>Climate crisis is a term describing global warming and climate change, and their
+                                        impacts. The term and the alternative term climate emergency have been used to
+                                        describe the threat of global warming to humanity (and their planet), and to
+                                        urge aggressive climate change mitigation.[1][2][3][4] In the scientific journal
+                                        BioScience, a January 2020 article, endorsed by over 11,000 scientists
+                                        worldwide, stated that "the climate crisis has arrived" and that an "immense
+                                        increase of scale in endeavors to conserve our biosphere is needed to avoid
+                                        untold suffering due to the climate crisis.</p>
+
+                                    <!-- <a href="" class="btn btn-main rounded">Subscibe</a> -->
+                            </div>
+                            <div class="img-body ib1">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Climate_emergency_declaration_map.svg/620px-Climate_emergency_declaration_map.svg.png"
+                                    alt="" class="img-fluid w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row1 right-border">
+                <div class="col-lg-5">
+                    <div class="card mb-3 cause-item">
+                        <div class="row no-gutters">
+                            <!-- <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="..."> -->
+
+                            <div class="img-body ib1">
+                                <img src="https://media-exp1.licdn.com/dms/image/C4D12AQEghS_M4JgO5A/article-inline_image-shrink_1500_2232/0/1520169990859?e=1675296000&v=beta&t=QaEH66Qxcyxs0p4sE80jwDgg2fT2nQHoq--yzFPJpxA"
+                                    alt="" class="img-fluid w-100">
+                            </div>
+                            <div class="card-body cb1">
+                                <h1 class="mb-3">Bad Governance</h3>
+                                    <p>Bad governance is the relationship between those who govern and those who are governed as a consequence of decision-making. This unfavourable relationship is created as a consequence of external factors or decisions such as violation of central or acceptable norms, such as those of liberal democracy, and bad economic policy:</p>
+
+                                    <!-- <a href="" class="btn btn-main rounded">Subscibe</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row1 left-border">
+                <div class="col-lg-5">
+                    <div class="card mb-3 cause-item">
+                        <div class="row no-gutters">
+                            <!-- <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
+                                class="img-fluid w-100" alt="..."> -->
+
+                            <div class="card-body cb1">
+                                <h1 class="mb-3">Skills Gap</h3>
+                                    <p>What is the skills gap? Let's start by exploring what we mean when we use the term skills gap. In short, it's the difference between the skills needed to do a particular job and those that are available.</p>
+
+                                    <!-- <a href="" class="btn btn-main rounded">Subscibe</a> -->
+                            </div>
+                            <div class="img-body ib1">
+                                <img src="https://www.efrontlearning.com/blog/wp-content/uploads/2017/10/Skill-gaps-in-the-workplace.png"
+                                    alt="" class="img-fluid w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- footer -->
@@ -243,7 +293,6 @@
                             {% else %}
                             <li><a href="{% url 'userlogin' %}">Login</a></li>
                             {% endif %}
-
                         </ul>
                     </div>
                 </div>
