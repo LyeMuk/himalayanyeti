@@ -19,12 +19,12 @@ class label(models.Model):
     parentcategory = models.ForeignKey(categories, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return f"{self.name}({self.parentcategory})"
 
 
 class article(models.Model):
     bid = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, null=True)
     # headerimage = models.ImageField()
     headerimage = models.ImageField(null=True, upload_to="images")
     # author = models.CharField(max_length=255)

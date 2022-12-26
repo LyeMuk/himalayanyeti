@@ -1,108 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HELP</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- TailBlocks CSS -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <title>Help Page</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-    <style>
-
-    </style>
 </head>
 
 <body>
 
-    <!-- Image and text -->
-    <nav class="navbar navbar-white bg-white mb-3">
-        <a class="navbar-brand text-dark" href="{% url 'home' %}">
-            <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" width="40"
-                height="40" class="d-inline-block align-top " alt="Logo">
-            Himalayan Yeti Foundation
-        </a>
 
-        <form class="form-inline my-2 my-lg-0 ">
-            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-                Navbar text with an inline element
-            </span>
+    <!-- NAVBAR -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="{% url 'home' %}">
+                <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" width="50"
+                    height="50" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="d-inline-block align-top " alt="Logo">
+                <span class="ml-3 text-xl">Himalayan Yeti Foundation</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="{% url 'home' %}">Home</a>
+                <a class="mr-5 hover:text-gray-900" href="{% url 'help' %}">Help</a>
+                <a class="mr-5 hover:text-gray-900" href="{% url 'about' %}">About</a>
+                <a class="mr-5 hover:text-gray-900">Contact</a>
+            </nav>
         </div>
+    </header>
+    <!-- NAVBARENDS -->
+
+    <!-- BG -->
+    <section class="text-gray-600 body-font ">
+        <div class="container  mx-auto flex flex-wrap p-5 items-center">
+            <img width="100%" height="400px" frameborder="3" marginheight="" marginwidth="20%" scrolling="yes"
+                alt="ecommerce" src="{% static 'img\help.jpg' %}">
+        </div>
+        <br>
+    </section>
+    <!-- BG -->
 
 
-    </nav>
-
-    <div class="text-center mt-3">
-        <h4>All resources for Help Center</h4>
-        <hr size="3" width="90%">
-    </div>
-
-
-    <div class=" container " style="width: auto;">
-
-        <div class="row my-4 border border-dark p-3" style="height:auto; ">
-
-
-
-            <div class="  col mt-4">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!-- BLOG -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-5">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">All Resources For Help Center
+                </h1>
+                <hr size="3" width="100%">
             </div>
 
-            <div class="col mr-3 ">
-                <img src="{% static 'img\help.jpg' %}" class="card-img float-right" alt="..." style="width: 20rem;">
+            <div class="flex ml-6 items-center mb-5">
+                <form method="get">
+                    <label for="label">Label:</label>
+                    <select id="label" name="label">
+                        <option value="0">All</option>
+                        {% for label in labellist %}
+                        <option value="{{ label.lid }}" {% if label.lid is labelvalue %}selected{% endif %}>{{ label }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Filter</button>
+                </form>
             </div>
+
+
+            <div class="flex flex-wrap -m-4 ">
+
+                {% for article in page_obj %}
+                <div class="p-4 md:w-1/3">
+                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{article.headerimage.url}}"
+                            alt="blog">
+                        <div class="p-6">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
+                                {{article.category}}|{{article.label.name}}</h2>
+                            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{article.title}}</h1>
+                            <p class="leading-relaxed mb-3">{{article.snippet|slice:":200"}}...</p>
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-1000 mb-1">
+                                {{article.postdate}}</h2>
+                            <div class="flex items-center flex-wrap ">
+                                <a href="{% url 'viewarticle' article.bid %}"
+                                class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'updatearticle' article.bid %}"
+                                    class="text-green-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path
+                                            d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+                                        <path
+                                            d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+                                    </svg>
+
+                                </a>
+                                <a href="{% url 'deletearticle' article.bid %}"
+                                    class="text-red-400 inline-flex items-center leading-none text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                                {% endif %}
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+            </div>
+            <br>
+
+            <div class="flex flex-row text-center w-75 mb-20">
+                {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">
+                    <button
+                        class=" col bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Previous
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H6M12 5l-7 7 7 7" />
+                        </svg>
+
+                    </button>
+                </a>
+                {% endif %}
+                <button
+                    class=" col bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </button>
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">
+                    <button
+                        class=" col bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Next
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h13M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </a>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                <a class="text-red-500 inline-flex ml-5 items-center" href="{% url 'addarticle' %}">ADD
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+                {% endif %}
+
+            </div>
+
 
         </div>
-
-
-        <div class="row my-4 border border-dark p-3" style="height:auto; ">
-
-
-
-            <div class="  col mt-4">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-
-            <div class="col mr-3 ">
-                <img src="{% static 'img\help.jpg' %}" class="card-img float-right" alt="..." style="width: 20rem;">
-            </div>
-
-
-        </div>
-
-    </div>
+    </section>
+    <!-- BLOG END -->
 
 
 
@@ -111,38 +182,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
