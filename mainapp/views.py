@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth  import authenticate, login, logout
 from django.contrib.auth.models import User
 from . forms import articleform
-from mainapp.models import article, label, categories
+from mainapp.models import article, label, categories, subscriber
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -15,7 +15,15 @@ labelvalue=0                            #used in help function to keep track of 
 # Create your views here.
 
 def home(request):
-    return render(request, "mainapp/index.html")
+    contex={}
+    if request.method == 'POST' and 'scrubmail' in request.POST:
+        scrubmail = request.POST['scrubmail']
+        mail = subscriber.objects.create(mail=scrubmail)
+        print(mail.mail, "Saved")
+        mail.save()
+    eventlist = article.objects.filter(category=6).order_by('-postdate')[0:3]
+    contex['eventlist']=eventlist
+    return render(request, "mainapp/index.html", contex)
 
 def donation(request):
     return render(request, "mainapp/donation.html")

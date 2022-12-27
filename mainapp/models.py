@@ -41,5 +41,19 @@ class article(models.Model):
     def __str__(self):
         return f"Title: {self.title} (Author: {self.author})"
 
+class subscriber(models.Model):
+    eid = models.AutoField(primary_key=True)
+    mail = models.EmailField(max_length = 254)
+    isactive = models.BooleanField(default=True)
+
+    def __str__(self):
+        status=""
+        if self.isactive==True:
+            status="ACTIVE"
+        else:
+            status="DEACTIVE"
+        return f"{self.mail}|({status})"
+
+
 
 

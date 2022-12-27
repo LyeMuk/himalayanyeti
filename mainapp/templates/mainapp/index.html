@@ -9,7 +9,7 @@
     <title>Himalayan Yeti Foundation</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}" >
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
 </head>
 
 <body>
@@ -45,7 +45,8 @@
                             Your small contribution means a lot. Natus officia amet hic <br>
                             accusamus repellat magni reprehenderit dolorem.
                         </p>
-                        <a href="{% url 'donation' %}" target="_blank" class="btn btn-main animated fadeInUp rounded">Donate Now</a>
+                        <a href="{% url 'donation' %}" target="_blank"
+                            class="btn btn-main animated fadeInUp rounded">Donate Now</a>
                     </div>
                 </div>
             </div>
@@ -77,9 +78,15 @@
                             <div class="card-body">
                                 <h3 class="mb-3">To get notify of the Latest Events please enter your email address and
                                     click on subscribe button.</h3>
-                                <input type="email" placeholder="Enter your Email" class="input-email">
 
-                                <a href="" class="btn btn-main rounded">Subscibe</a>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <input type="email" placeholder="Enter your Email" class="input-email"
+                                        name="scrubmail">
+
+                                    <button type="submit" class="btn btn-main rounded">Subscibe</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -105,58 +112,26 @@
             </div>
 
             <div class="row">
+
+                {% for event in eventlist %}
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
-                                class="img-fluid w-100" alt="...">
+                            <img src="{{event.headerimage.url}}" class="img-fluid w-100" alt="...">
 
                             <div class="card-body">
-                                <h3 class="mb-3">Lorem, ipsum dolor.</h3>
-                                <p class="card-text mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
-                                    vel dmnfsdn dnf?.</p>
+                                <h3 class="mb-3">{{event.title}}</h3>
+                                <p class="card-text mb-4">
+                                    {{ event.body|safe }}
+                                </p>
 
                                 <!-- <a href="" class="btn btn-main rounded">Donate Now</a> -->
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
-                <div class="col-lg-4">
-                    <div class="card mb-3 cause-item">
-                        <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
-                                class="img-fluid w-100" alt="...">
-
-                            <div class="card-body">
-                                <h3 class="mb-3">Lorem, ipsum dolor.</h3>
-                                <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                                    fugiat necessitatibus molestias quaerat, earum consequuntur!
-                                </p>
-
-                                <!-- <a href="donation.html" class="btn btn-main rounded">Donate Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card mb-3 cause-item">
-                        <div class="row no-gutters">
-                            <img src="https://mcmscache.epapr.in/post_images/website_350/post_15667588/thumb.jpg"
-                                class="img-fluid w-100" alt="...">
-
-                            <div class="card-body">
-                                <h3 class="mb-3">Lorem, ipsum dolor.</h3>
-
-                                <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quaerat expedita totam maiores similique, minima cupiditate.</p>
-
-                                <!-- <a href="donation.html" class="btn btn-main rounded">Donate Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -219,7 +194,11 @@
                             </div>
                             <div class="card-body cb1">
                                 <h1 class="mb-3">Bad Governance</h3>
-                                    <p>Bad governance is the relationship between those who govern and those who are governed as a consequence of decision-making. This unfavourable relationship is created as a consequence of external factors or decisions such as violation of central or acceptable norms, such as those of liberal democracy, and bad economic policy:</p>
+                                    <p>Bad governance is the relationship between those who govern and those who are
+                                        governed as a consequence of decision-making. This unfavourable relationship is
+                                        created as a consequence of external factors or decisions such as violation of
+                                        central or acceptable norms, such as those of liberal democracy, and bad
+                                        economic policy:</p>
 
                                     <!-- <a href="" class="btn btn-main rounded">Subscibe</a> -->
                             </div>
@@ -237,7 +216,9 @@
 
                             <div class="card-body cb1">
                                 <h1 class="mb-3">Skills Gap</h3>
-                                    <p>What is the skills gap? Let's start by exploring what we mean when we use the term skills gap. In short, it's the difference between the skills needed to do a particular job and those that are available.</p>
+                                    <p>What is the skills gap? Let's start by exploring what we mean when we use the
+                                        term skills gap. In short, it's the difference between the skills needed to do a
+                                        particular job and those that are available.</p>
 
                                     <!-- <a href="" class="btn btn-main rounded">Subscibe</a> -->
                             </div>
