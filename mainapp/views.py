@@ -8,18 +8,43 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from django.contrib.auth.decorators import login_required
 
+# Import to send email
+from django.conf import settings
+from django.http import HttpResponse
+from django.core.mail import EmailMultiAlternatives, send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+
 # Global variables
 
 labelvalue=0                            #used in help function to keep track of filter
 
 # Create your views here.
 
+def sendWelcomeMail(mail):
+    send_to=[]
+    send_to.append(mail)
+    contex={}
+    contex['mailid']=mail.split('@')[0]
+    html_content = render_to_string("mainapp/emailtemplate/welcome.html", contex)
+    text_content = strip_tags(html_content)
+    email = EmailMultiAlternatives(
+        "Thanks for subscribing hIMALAYAN yETI fOUNDATION",
+        text_content,
+        settings.EMAIL_HOST_USER ,
+        send_to
+    )
+    email.attach_alternative(html_content, 'text/html')
+    print(email)
+    email.send()
+    return 
+
 def home(request):
     contex={}
     if request.method == 'POST' and 'scrubmail' in request.POST:
         scrubmail = request.POST['scrubmail']
         mail = subscriber.objects.create(mail=scrubmail)
-        print(mail.mail, "Saved")
+        sendWelcomeMail(scrubmail)
         mail.save()
     eventlist = article.objects.filter(category=6).order_by('-postdate')[0:3]
     contex['eventlist']=eventlist
