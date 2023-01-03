@@ -658,6 +658,14 @@
   transition: all 0.2s ease;
 }
 
+.latest .container .row .col-lg-4 .card .row .card-body .danger {
+  background: red;
+  border-color: red;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .latest .container .row .col-lg-4 .card .row .card-body .btn-main:hover,
 .latest .container .row .col-lg-4 .card .row .card-body .btn-small:hover {
   background: #863bae;
@@ -712,6 +720,7 @@
 }
 
 /* involve */
+
 .involve .container {
   width: 100%;
   padding-right: 15px;
@@ -804,23 +813,28 @@
   text-align: center;
 }
 
-.involve .container .card-container .card .btn a {
-  background: #5680e9;
-  border-color: #5680e9;
+
+.involve .container .card-container .card .btn button {
+  background: #fb8500;
+  border-color: #fb8500;
   color: #fff;
   width: 505;
-  border-radius: 50px;
+  border-radius: 15px;
+
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .involve .container .card-container .card .btn a:hover {
+
   background: #863bae;
   color: #fff;
   border-color: #863bae;
 }
 
+
 .involve .container .card-container .card .btn a {
+
   display: inline-block;
   width: 505;
   font-size: 14px;
@@ -881,7 +895,9 @@
   }
 }
 
+
 /* urgency */
+
 .urgency .container {
   max-width: 1140px;
   width: 100%;
@@ -1005,6 +1021,8 @@
 .urgency .container .row1 .col-lg-5 .card .row .card-body p {
   font-size: 20px;
   font-weight: 100;
+
+
 }
 
 .urgency .container .row1 .col-lg-5 .card .row .card-body .btn-main,
@@ -1098,10 +1116,12 @@
   }
 }
 
+
 /* vision */
 .vision {
   background-color: #fe8464;
   background-color: #5680e9;
+
 }
 
 .vision .container {
@@ -1174,6 +1194,114 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+}
+
+.focus .container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.focus .container .row {
+  margin: auto auto;
+}
+
+.focus .container .row .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.focus .container .row .section-title .heading {
+  font-family: "Bitter", serif;
+  font-size: 60px;
+  font-weight: 1000;
+  color: #000000;
+}
+
+.focus .container .row .focusarea {
+  margin: 20px auto;
+  padding: 10px 10px;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.focus .container .row .focusarea .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  background-color: #ffd09b;
+}
+
+.focus .container .row .focusarea .info:hover {
+  background-color: #ffc17a;
+  -webkit-box-shadow: 0 15px 30px 1px grey;
+          box-shadow: 0 15px 30px 1px grey;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.focus .container .row .focusarea .info .col1 .title {
+  margin: 10px auto;
+}
+
+.focus .container .row .focusarea .info .col1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.focus .container .row .focusarea .info .img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.focus .container .row .focusarea .info .img img {
+  width: 100%;
+}
+
+.focus .container .row .focusarea .subcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.focus .container .row .focusarea .subcontent .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  background-color: #ffd09b;
+  border-bottom: 5px solid #fe6e9a;
+  padding: 15px;
+}
+
+.focus .container .row .focusarea .subcontent .card:hover {
+  background-color: #ffc17a;
+  -webkit-box-shadow: 0 15px 30px 1px grey;
+          box-shadow: 0 15px 30px 1px grey;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.focus .container .row .focusarea .subcontent .card .title {
+  margin-bottom: 10px;
+}
+
+.focus .container .row .focusarea .subcontent .img img {
+  width: 100%;
+
 }
 
 /* focus */
@@ -1485,7 +1613,9 @@
   border-radius: 50%;
 }
 
+
 .footer .container .media ul li a img:hover {
   background-color: #fe6e9a;
 }
+
 /*# sourceMappingURL=style.css.map */
