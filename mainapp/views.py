@@ -157,3 +157,8 @@ def updatearticle(request, pk):
 def contact(request):
     contex={}
     return render(request, "mainapp/contact.html", contex)
+
+
+def government(request):
+    contex={}
+    return render(request, "mainapp/government.html", contex)
