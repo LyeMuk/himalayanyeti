@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSR</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="{% static 'css/csr.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" alt="logo">
+        </div>
+
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="list">
+            <!-- <input type="text" placeholder="Type to search"> -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="">Focus Areas</a></li>
+            <li><a href="">Get Involved</a></li>
+            <li><a href="{% url 'help' %}">Help Centre</a></li>
+        </div>
+    </nav>
+
+    <!--  -->
+    <h1>CSR Section</h1>
+    <!-- footer -->
+    <section class="section footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <div class="widget">
+                        <h2>Connect with us</h2>
+                        <div class="social">
+                            <div class="person">
+                                <h4>Nagender Singh</h4><br>
+                                <h5>Founder Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <a href="#"><i class="material-icons call"></i>+2(305) 587-3407</a><br>
+                                <a href="#"><i class="material-icons email"></i>himalayanyetifoundation@gmail.com</a>
+                            </div>
+                            <div class="person">
+                                <h4>Vikram Kothari</h4><br>
+                                <h5>Advisor Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <a href="#"><i class="material-icons call"></i>+919650933677</a><br>
+                                <a href="#"><i class="material-icons email"></i>hyfconsultant@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="widget footer-widget">
+                        <h4 class="text-capitalize mb-4 text-white">Quick Links</h4>
+
+                        <ul class="list-unstyled footer-menu lh-35">
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">SDG</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'createuser' %}">Create User</a></li>
+                            <li><a href="{% url 'userlogout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row media">
+                <ul>
+                    <li><a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/instagram.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/twitter.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -162,3 +162,21 @@ def contact(request):
 def government(request):
     contex={}
     return render(request, "mainapp/government.html", contex)
+
+
+def organisation(request):
+    contex={}
+    return render(request, "mainapp/organisation.html", contex)
+
+def institute(request):
+    contex={}
+    return render(request, "mainapp/institute.html", contex)
+
+
+def individual(request):
+    contex={}
+    return render(request, "mainapp/individual.html", contex)
+
+def csr(request):
+    contex={}
+    return render(request, "mainapp/csr.html", contex)
