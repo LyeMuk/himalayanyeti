@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from django.contrib.auth.decorators import login_required
 
-# Import to send email
+# Imports to send email
 from django.conf import settings
 from django.http import HttpResponse
 from django.core.mail import EmailMultiAlternatives, send_mail
@@ -29,7 +29,7 @@ def sendWelcomeMail(mail):
     html_content = render_to_string("mainapp/emailtemplate/welcome.html", contex)
     text_content = strip_tags(html_content)
     email = EmailMultiAlternatives(
-        "Thanks for subscribing hIMALAYAN yETI fOUNDATION",
+        "Thanks for Subscribing Himalayan Yeti Foundation",
         text_content,
         settings.EMAIL_HOST_USER ,
         send_to
@@ -152,3 +152,8 @@ def updatearticle(request, pk):
     form = articleform(instance=blog_post)
     contex['artform']=form
     return render(request, "mainapp/addarticle.html", contex)
+
+
+def contact(request):
+    contex={}
+    return render(request, "mainapp/contact.html", contex)
