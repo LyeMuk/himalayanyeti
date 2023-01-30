@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import passwords
 # vercel config
 # import dj_database_url
 
@@ -23,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lklarn_d1x!3gcwm1jys0f19mf-on38=yuqx0$1emw#nwu9-vs'
+SECRET_KEY = passwords.SECRET_KEY
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,8 +128,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "k211mukesh@gmail.com"
-EMAIL_HOST_PASSWORD = "koixhqtpjrvqvrwc"
+EMAIL_HOST_USER = passwords.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = passwords.EMAIL_HOST_PASSWORD
 
 
 # Static files (CSS, JavaScript, Images)
