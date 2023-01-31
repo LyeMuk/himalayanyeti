@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HELP</title>
+    <title>HYF|Help</title>
 
     <!-- TailBlocks CSS -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -83,7 +83,7 @@
                             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{article.title}}</h1>
                             <p class="leading-relaxed mb-3">{{article.snippet|slice:":200"}}...</p>
                             <h2 class="tracking-widest text-xs title-font font-medium text-gray-1000 mb-1">
-                                {{article.postdate}}</h2>
+                                {{article.postdate|date:'l, F j, Y' }}</h2>
                             <div class="flex items-center flex-wrap ">
                                 <a href="{% url 'viewarticle' article.bid %}"
                                 class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More

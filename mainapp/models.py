@@ -29,7 +29,7 @@ class article(models.Model):
     headerimage = models.ImageField(null=True, upload_to="images")
     # author = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    postdate = models.DateField(auto_now_add=True)
+    postdate = models.DateTimeField(editable=False, auto_now=True) 
     # category = models.CharField(max_length=255)
     category = models.ForeignKey(categories, on_delete=models.CASCADE)
     # label = models.CharField(max_length=255)

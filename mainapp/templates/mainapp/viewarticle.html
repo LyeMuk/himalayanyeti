@@ -54,7 +54,7 @@
                         <h5 class="card-title"><strong>{{ article.title }}</strong></h5>
                         <p class="card-text article-meta">
                             <span class="article-author">Author Name: {{ article.author }}</span><br>
-                            <span class="article-date">Post Date: {{ article.postdate }}</span><br>
+                            <span class="article-date">Post Date: {{ article.postdate|date:'l, F j, Y'  }}</span><br>
                             <span class="article-label">category: <strong>{{ article.category }}</strong> Label:
                                 <strong>{{ article.label.name }}</strong></span>
                         </p>
