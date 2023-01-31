@@ -17,6 +17,10 @@ urlpatterns = [
     path('institute', views.institute, name='institute'),
     path('individual', views.individual, name='individual'),
     path('csr', views.csr, name='csr'),
+    path('getinvolved', views.getinvolved, name='getinvolved'),
+    path('focusArea', views.focusArea, name='focusArea'),
+
+
 
 
 

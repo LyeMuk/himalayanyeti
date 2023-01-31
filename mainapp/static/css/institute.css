@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 *,
@@ -11,332 +10,506 @@
           box-sizing: border-box;
 }
 
-/* navbar */
 .navbar {
-position: -webkit-sticky;
-position: sticky;
-top: 0;
-z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .navbar {
-position: -webkit-sticky;
-position: sticky;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-    flex-wrap: wrap;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
--webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-height: 70px;
-padding: 0.1rem 2rem;
-background-color: #fff;
--webkit-box-shadow: 0 0 11px 2px #999797;
-        box-shadow: 0 0 11px 2px #999797;
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  padding: 0.1rem 2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 11px 2px #999797;
+          box-shadow: 0 0 11px 2px #999797;
 }
 
 .navbar .logo img {
-width: 50px;
+  width: 50px;
 }
 
 .navbar .list {
-width: 50%;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-gap: 1em;
--webkit-box-pack: end;
-    -ms-flex-pack: end;
-        justify-content: end;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
-width: -webkit-fit-content;
-width: -moz-fit-content;
-width: fit-content;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .navbar .list input {
--webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-font-family: "Montserrat", sans-serif;
-width: 150px;
-background-color: #e5e5e5;
-border: #213345;
-color: #000000;
-font-weight: 400;
-font-size: 1rem;
-outline: none;
-padding: 10px;
--ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: "Montserrat", sans-serif;
+  width: 150px;
+  background-color: #e5e5e5;
+  border: #213345;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+  padding: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .navbar .list li {
-list-style: none;
+  list-style: none;
 }
 
 .navbar .list li a {
-font-family: "Montserrat", sans-serif;
-color: #000000;
-text-transform: capitalize;
-font-weight: 600;
-font-size: 1rem;
-padding: 30px 10px;
-text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 30px 10px;
+  text-decoration: none;
 }
 
 .navbar .list li a:hover {
-color: #5680e9;
+  color: #5680e9;
+}
+
+.navbar .list li .btn-main,
+.navbar .list li .btn-small {
+  background: #5680e9;
+  border-color: #5680e9;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .list li .btn-main:hover,
+.navbar .list li .btn-small:hover {
+  background: #863bae;
+  color: #fff;
+  border-color: #863bae;
+}
+
+.navbar .list li .btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.navbar .list li .rounded {
+  border-radius: .25rem !important;
 }
 
 .navbar input[type=checkbox] {
-display: none;
+  display: none;
 }
 
 .navbar .hamburger {
-display: none;
-font-size: 24px;
--webkit-user-select: none;
-   -moz-user-select: none;
-    -ms-user-select: none;
-        user-select: none;
-cursor: pointer;
+  display: none;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
-.navbar .list {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  right: 0;
-  left: 0;
-  text-align: center;
-  top: 100%;
+  .navbar .list {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .navbar .list input {
+    display: none;
+  }
+  .navbar .list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar .list li:hover {
+    background-color: #5680e9;
+    -webkit-transition: ease 0.4s;
+    transition: ease 0.4s;
+  }
+  .navbar .list li:hover a {
+    color: #fff;
+  }
+  .navbar input[type=checkbox]:checked ~ .list {
+    display: block;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+.section {
+  padding: 100px 0;
   width: 100%;
-  z-index: 1;
+}
+
+.section .heading {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 25px;
+}
+
+.section .container {
+  margin: auto auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.section .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.section .container .row .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section .container .row .cards #card1 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-blue-webinar-background-image_529272.jpg) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card1:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card2 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://media.istockphoto.com/id/464406178/photo/teacher-with-children-on-field-trip.jpg?s=612x612&w=0&k=20&c=hET6GIfpNNQPXbfKklDcwej-NYf5x4aVrLfjvL7NV9g=) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card2:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card3 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://img.freepik.com/free-vector/people-volunteering-donating-money-items_53876-64646.jpg?w=2000) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card3:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card4 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://img.freepik.com/free-vector/people-volunteering-donating-money-items_53876-64646.jpg?w=2000) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card4:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards .card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 800;
+  color: white;
   cursor: pointer;
 }
-.navbar .list input {
-  display: none;
-}
-.navbar .list li {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.navbar .list li:hover {
-  background-color: #5680e9;
-  -webkit-transition: ease 0.4s;
-  transition: ease 0.4s;
-}
-.navbar .list li:hover a {
-  color: #fff;
-}
-.navbar input[type=checkbox]:checked ~ .list {
-  display: block;
-}
-.navbar .hamburger {
-  display: block;
-}
+
+.section .container .row .cards .active {
+  background: none;
 }
 
-
-
-
-
-/* footer */
 .footer {
-position: relative;
-padding-top: 25px;
-padding-inline: 50px;
-padding-bottom: 5px;
-background-color: #000000;
-bottom: 0;
+  padding-top: 25px;
+  padding-inline: 50px;
+  padding-bottom: 5px;
+  background-color: #000000;
 }
 
 .footer .container {
-max-width: 1140px;
-width: 100%;
-margin: auto auto;
+  max-width: 1140px;
+  width: 100%;
+  margin: auto auto;
 }
 
 .footer .container .row {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-margin-right: 15px;
-margin-left: 15px;
--webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer .container .row .col-1 {
--webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 100%;
 }
 
 .footer .container .row .col-1 h2 {
-color: #fff;
-font-size: 25px;
-font-weight: 800;
-line-height: 75px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 75px;
 }
 
 @media (max-width: 700px) {
-.footer .container .row .col-1 .social {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.footer .container .row .col-1 .social .person {
-  padding-bottom: 25px;
-}
-}
-
-.footer .container .row .col-1 .social {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-color: #ffffff;
+  .footer .container .row .col-1 .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .container .row .col-1 .social .person {
+    padding-bottom: 25px;
+  }
 }
 
+.footer .container .row .col-1 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+}
+
 .footer .container .row .col-1 .social .person {
-padding-right: 15px;
+  padding-right: 15px;
 }
 
 .footer .container .row .col-1 .social .person h4 {
-font-size: 20px;
-font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .footer .container .row .col-1 .social .person h5 {
-font-size: 15px;
-font-weight: 500;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .footer .container .row .col-1 .social .person a {
-text-decoration: none;
-color: #b9b9b9;
+  text-decoration: none;
+  color: #b9b9b9;
 }
 
 .footer .container .row .col-1 .social .person a .call::before {
-content: "call";
-font-size: small;
-margin-right: 10px;
-color: #5680e9;
+  content: "call";
+  font-size: small;
+  margin-right: 10px;
+  color: #5680e9;
 }
 
 .footer .container .row .col-1 .social .person a .email::before {
-content: "email";
-font-size: small;
-margin-right: 10px;
-color: #5680e9;
+  content: "email";
+  font-size: small;
+  margin-right: 10px;
+  color: #5680e9;
 }
 
 .footer .container .row .col-1 .social .person a:hover {
-color: #fe6e9a;
+  color: #fe6e9a;
 }
 
 .footer .container .row .col-2 {
--webkit-box-flex: 0;
-    -ms-flex: 0 0 40%;
-        flex: 0 0 40%;
-max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  max-width: 100%;
 }
 
 .footer .container .row .col-2 .widget .text-capitalize {
-text-transform: capitalize;
-color: #fff;
-font-size: 25px;
-font-weight: 800;
-line-height: 75px;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 75px;
 }
 
 .footer .container .row .col-2 .widget .mb-4 {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer .container .row .col-2 .widget .footer-menu {
--webkit-box-flex: 0;
-    -ms-flex: 0 0 10%;
-        flex: 0 0 10%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
 }
 
 .footer .container .row .col-2 .widget ul {
-list-style: none;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer .container .row .col-2 .widget ul li {
--webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 
 .footer .container .row .col-2 .widget ul li a {
-text-decoration: none;
-color: #b9b9b9;
-font-size: larger;
-line-height: 45px;
+  text-decoration: none;
+  color: #b9b9b9;
+  font-size: larger;
+  line-height: 45px;
+}
+
+.footer .container .row .col-2 .widget ul li a:hover {
+  color: #5680e9;
 }
 
 @media screen and (max-width: 800px) {
-.footer .container .row .col-1 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.footer .container .row .col-2 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
+  .footer .container .row .col-1 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .footer .container .row .col-2 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .footer .container .media {
-padding-bottom: 5px;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
+  padding-bottom: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer .container .media ul {
-list-style: none;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-padding: 15px 25px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 25px;
 }
 
 .footer .container .media ul li {
-margin-right: 10px;
+  margin-right: 10px;
 }
 
 .footer .container .media ul li a img {
-background-color: #5680e9;
-height: 25px;
-padding: 5px;
-border-radius: 50%;
+  background-color: #5680e9;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .footer .container .media ul li a img:hover {
-background-color: #fe6e9a;
+  background-color: #fe6e9a;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 800px) {
+  .footer {
+    padding-inline: 0;
+  }
+}
+/*# sourceMappingURL=institute.css.map */

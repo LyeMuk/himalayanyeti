@@ -1,17 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  *,
-  ::after,
-  ::before {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-/* navbar */
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .navbar {
   position: -webkit-sticky;
   position: sticky;
@@ -65,7 +63,6 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: "Montserrat", sans-serif;
   width: 150px;
   background-color: #e5e5e5;
   border: #213345;
@@ -84,7 +81,6 @@
 }
 
 .navbar .list li a {
-  font-family: "Montserrat", sans-serif;
   color: #000000;
   text-transform: capitalize;
   font-weight: 600;
@@ -95,6 +91,43 @@
 
 .navbar .list li a:hover {
   color: #5680e9;
+}
+
+.navbar .list li .btn-main,
+.navbar .list li .btn-small {
+  background: #5680e9;
+  border-color: #5680e9;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .list li .btn-main:hover,
+.navbar .list li .btn-small:hover {
+  background: #863bae;
+  color: #fff;
+  border-color: #863bae;
+}
+
+.navbar .list li .btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.navbar .list li .rounded {
+  border-radius: .25rem !important;
 }
 
 .navbar input[type=checkbox] {
@@ -147,18 +180,273 @@
   }
 }
 
+.section {
+  padding: 100px 0;
+  width: 100%;
+}
 
+.section .heading {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 25px;
+}
 
+.section .container {
+  margin: auto auto;
+  padding: 0 15px;
+  width: 100%;
+}
 
-  
-/* footer */
+.section .container .row {
+  width: 100%;
+}
+
+.section .container .row .content {
+  text-align: center;
+  margin: 15px;
+}
+
+.section .container .row .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.section .container .row .cards #card1 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-party-and-government-livelihood-construction-rural-mobile-phone-poster-image_194472.jpg) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card1:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card2 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://img.freepik.com/free-photo/international-day-literacy-concept-with-learning-tools_1150-24438.jpg?w=2000) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card2:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card3 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://www.sundayguardianlive.com/wp-content/uploads/2018/11/p1-33.jpg) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card3:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card4 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://st2.depositphotos.com/48957040/45647/v/450/depositphotos_456479770-stock-illustration-agri-business-illustrations-agricultural-concept.jpg) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card4:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card5 {
+  background: linear-gradient(60deg, rgba(54, 30, 36, 0.5), rgba(61, 35, 31, 0.5)), url(https://w7.pngwing.com/pngs/698/92/png-transparent-recycling-waste-management-reuse-plastic-environmental-background-miscellaneous-leaf-text.png) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card5:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards #card6 {
+  background: linear-gradient(60deg, #9fe4ed, rgba(211, 179, 174, 0.5)), url(https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?w=2000) no-repeat;
+  background-size: cover;
+}
+
+.section .container .row .cards #card6:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.section .container .row .cards .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 17%;
+          flex: 1 0 17%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+}
+
+.section .container .row .cards .active {
+  background: none;
+}
+
+.line {
+  width: 20%;
+  height: 5px;
+  margin: 0 auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe8464), to(#fe6e9a));
+  background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+}
+
+.logosection {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.logosection .container {
+  margin: auto auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.logosection .container .row {
+  width: 100%;
+}
+
+.logosection .container .row .heading {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 25px;
+}
+
+.logosection .container .row .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logosection .container .row .logos .logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+}
+
+.logosection .container .row .logos .logo img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+.logosection .container .row .logos .logo img:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.logosection .container .row .logos .active {
+  background: none;
+}
+
 .footer {
-  position: relative;
   padding-top: 25px;
   padding-inline: 50px;
   padding-bottom: 5px;
   background-color: #000000;
-  bottom: 0;
 }
 
 .footer .container {
@@ -297,6 +585,10 @@
   line-height: 45px;
 }
 
+.footer .container .row .col-2 .widget ul li a:hover {
+  color: #5680e9;
+}
+
 @media screen and (max-width: 800px) {
   .footer .container .row .col-1 {
     -webkit-box-flex: 1;
@@ -339,4 +631,10 @@
 .footer .container .media ul li a img:hover {
   background-color: #fe6e9a;
 }
-  /*# sourceMappingURL=style.css.map */
+
+@media (max-width: 800px) {
+  .footer {
+    padding-inline: 0;
+  }
+}
+/*# sourceMappingURL=csr.css.map */

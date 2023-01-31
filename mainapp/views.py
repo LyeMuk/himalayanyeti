@@ -180,3 +180,11 @@ def individual(request):
 def csr(request):
     contex={}
     return render(request, "mainapp/csr.html", contex)
+
+def getinvolved(request):
+    contex={}
+    return render(request, "mainapp/getinvolved.html", contex)
+
+def focusArea(request):
+    contex={}
+    return render(request, "mainapp/focusArea.html", contex)

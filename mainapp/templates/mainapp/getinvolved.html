@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involed</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/getinvolved.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" alt="logo">
+        </div>
+
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger"><span class="material-icons">menu</span></label>
+
+        <div class="list">
+            <!-- <input type="text" placeholder="Type to search"> -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'focusArea' %}">Focus Areas</a></li>
+
+            <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+            <li><a href="{% url 'help' %}">Blogs & article</a></li>
+        </div>
+    </nav>
+
+    <!-- get involved -->
+    <section class="section involve">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                        <span class="heading">Get Involved</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://cesie.org/media/get-involved-1.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>As an Individual</h1>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias sint fugiat quo
+                            pariatur corrupti?</p>
+                    </div>
+                    <div class="btn">
+                        <a href="{% url 'individual' %}">Explore</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://digital-skills-jobs.europa.eu/sites/default/files/inline-images/1_Network%2C%20cooperate%20and%20exchange%20with%20peers%20across%20Europe.png"
+                            alt="">
+                    </div>
+                    <div class="title">
+                        <h1>As an Organisation</h1>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias sint fugiat quo
+                            pariatur corrupti?</p>
+                    </div>
+                    <div class="btn">
+                        <a href="{% url 'organisation' %}">Explore</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://global-uploads.webflow.com/5e157548d6f7910beea4e2d6/62dea5600656159622b81c71_government-logo-design.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>As Government</h1>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias sint fugiat quo
+                            pariatur corrupti?</p>
+                    </div>
+                    <div class="btn">
+                        <a href="{% url 'government' %}">Explore</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://t4.ftcdn.net/jpg/02/51/49/57/360_F_251495755_xWdqsPQavPBZA6G2n8Oslw9GDWtc1SDp.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>As an Institute</h1>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias sint fugiat quo
+                            pariatur corrupti?</p>
+                    </div>
+                    <div class="btn">
+                        <a href="{% url 'institute' %}">Explore</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="https://thumbs.dreamstime.com/b/eco-symbol-corporate-social-responsibility-concepts-business-recycle-icon-csr-abbreviation-achieve-notes-81258346.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>CSR</h1>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda alias sint fugiat quo
+                            pariatur corrupti?</p>
+                    </div>
+                    <div class="btn">
+                        <a href="{% url 'csr' %}">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="section footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <div class="widget">
+                        <h2>Connect with us</h2>
+                        <div class="social">
+                            <div class="person">
+                                <h4>Nagender Singh</h4><br>
+                                <h5>Founder Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <!-- <a href="#"><i class="material-icons call"></i>+2(305) 587-3407</a><br> -->
+                                <a href="#"><i class="material-icons email"></i>himalayanyetifoundation@gmail.com</a>
+                            </div>
+                            <div class="person">
+                                <h4>Vikram Kothari</h4><br>
+                                <h5>Advisor Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <!-- <a href="#"><i class="material-icons call"></i>+919650933677</a><br> -->
+                                <a href="#"><i class="material-icons email"></i>hyfconsultant@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="widget footer-widget">
+                        <h4 class="text-capitalize mb-4 text-white">Quick Links</h4>
+
+                        <ul class="list-unstyled footer-menu lh-35">
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">SDG</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'createuser' %}">Create User</a></li>
+                            <li><a href="{% url 'userlogout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row media">
+                <ul>
+                    <li><a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/instagram.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/twitter.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

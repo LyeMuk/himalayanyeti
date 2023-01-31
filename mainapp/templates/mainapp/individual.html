@@ -8,7 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HYF|Individual</title>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/individual.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
 </head>
@@ -27,14 +29,38 @@
             <!-- <input type="text" placeholder="Type to search"> -->
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="">Focus Areas</a></li>
-            <li><a href="">Get Involved</a></li>
+            <li><a href="{% url 'focusArea' %}">Focus Areas</a></li>
+
+            <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
             <li><a href="{% url 'help' %}">Help Centre</a></li>
         </div>
     </nav>
 
     <!--  -->
-    <h1>individual Section</h1>
+    <section class="section">
+        <div class="heading">
+            <h1>Get Involved as Individual</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="cards">
+                    <div class="card" id="card1">
+                        Volunteer
+                    </div>
+                    <div class="card" id="card2">
+                        Internship
+                    </div>
+                    <div class="card" id="card3">
+                        Careers
+                    </div>
+                    <div class="card" id="card4">
+                        Pitch an idea to create Social Impact
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
     <section class="section footer">
         <div class="container">
@@ -48,7 +74,7 @@
                                 <h5>Founder Director</h5>
                                 <h5>Himalayan Yeti Foundation</h5>
                                 <br>
-                                <a href="#"><i class="material-icons call"></i>+2(305) 587-3407</a><br>
+                                <!-- <a href="#"><i class="material-icons call"></i>+2(305) 587-3407</a><br> -->
                                 <a href="#"><i class="material-icons email"></i>himalayanyetifoundation@gmail.com</a>
                             </div>
                             <div class="person">
@@ -56,7 +82,7 @@
                                 <h5>Advisor Director</h5>
                                 <h5>Himalayan Yeti Foundation</h5>
                                 <br>
-                                <a href="#"><i class="material-icons call"></i>+919650933677</a><br>
+                                <!-- <a href="#"><i class="material-icons call"></i>+919650933677</a><br> -->
                                 <a href="#"><i class="material-icons email"></i>hyfconsultant@gmail.com</a>
                             </div>
                         </div>

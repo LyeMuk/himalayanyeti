@@ -27,8 +27,8 @@
             <!-- <input type="text" placeholder="Type to search"> -->
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="">Focus Areas</a></li>
-            <li><a href="getinvolved.html">Get Involved</a></li>
+            <li><a href="{% url 'focusArea' %}">Focus Areas</a></li>
+            <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
             <li><a href="{% url 'help' %}">Blogs & article</a></li>
             <li><a href="{% url 'donation' %}" target="_blank" class="btn btn-main animated rounded">Donate Now</a></li>
         </div>
@@ -213,19 +213,22 @@
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
-                            <img src="{{event.headerimage.url}}"
-                                class="img-fluid w-100" alt="...">
+                            <img src="{{event.headerimage.url}}" class="img-fluid w-100" alt="...">
 
                             <div class="card-body">
                                 <h3 class="mb-3">{{event.title}}</h3>
                                 <p class="card-text mb-4">{{ event.body|safe }}</p>
 
+                                {% if user.is_authenticated %}
                                 <div class="btndiv">
-                                    <button class="btn btn-main primary rounded"><span
-                                            class="material-icons">edit</span></button>
-                                    <button class="btn btn-main danger rounded"><span
-                                            class="material-icons">delete</span></button>
+                                    <a href="{% url 'updatearticle' event.bid %}"
+                                        class="btn btn-main primary rounded"><span
+                                            class="material-icons">edit</span></a>
+                                    <a href="{% url 'deletearticle' event.bid %}"
+                                        class="btn btn-main danger rounded"><span
+                                            class="material-icons">delete</span></a>
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

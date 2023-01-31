@@ -5,10 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=Himalayan Yeti , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HYF|About</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 </head>
 
 <body>
@@ -18,152 +21,228 @@
             <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" alt="logo">
         </div>
 
-        <div class="list">
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'help' %}">Help</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="">Contact</a></li>
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-            </ul>
+        <div class="list">
+            <!-- <input type="text" placeholder="Type to search"> -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'focusArea' %}">Focus Areas</a></li>
+
+            <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+            <li><a href="{% url 'help' %}">Blogs & article</a></li>
         </div>
     </nav>
 
-    <div class="box" style="height:680px;background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('static/img/mountain.jpg');
-	background-repeat:no-repeat;
-	background-size:100% 100%;
-	color:white;">
-        <div class="content">
-            <img src="{% static 'img/yeti.png' %}" alt="Yeti">
-            <div class="info">
-                <h1>Who we are?</h1><br>
-                <p class="cnt">People in the Himalayas believe that there’s a snowman that is covered with brown, grey
-                    or
-                    white hair and is sometimes depicted as having large, sharp teeth. They call it Yeti, living in
-                    Himalayas, thus <strong>Himalayan Yeti!</strong><br>
-                    We don’t know, we have never seen a Yeti, but we have seen plastics in the Himalayas, we
-                    have seen irresponsible tourists coming in, boozing, partying and imbalancing the natural
-                    habitat.<br>
-                    What we have also seen is the youth migrating to urban cities leaving behind their land, fertile
-                    soil, their problems and hardships, and also their parents.<br>
-                    Leaving behind everything can never be questionable, isn’t it? Certainly it is, as what they’ve left
-                    is diamond in the search of gold, and today half of them, half of us, you, me all of us, arent
-                    happy or satisfied living in the concrete jungles<br>
-                    There are ample opportunities available in the rural India which is unexplored and if approached
-                    in a righteous way, it can help us reunite rural families and open an array of possibilities and
-                    scope for development<br>
-                    <strong>Himalayan Yeti</strong>, a section 8 company registered under the companies act of 2013,
-                    having 12A
-                    and 80G status is a <strong>foundation for meaningful purpose</strong>. The organization was
-                    established in
-                    2019 by <strong>Nagender Singh </strong>for the sole purpose to fight plastic menace in Ladakh
-                    region, but with
-                    time, our mission changed and became more holistic.<br>
-                    <strong><i>Today our mission is to Bring the Youth Back and help them rehabilitate in their rural
-                            villages
-                            with their families, and create opportunities for them, so that they can be innovators,
-                            entrepreneurs, skilled-professionals, etc.</i></strong><br>
-                </p>
+    <!-- About & storyline of NGO -->
+    <div class="about-section">
+        <div class="inner-width">
+            <h1 class="main-heading">Our Story!</h1>
+            <div class="border"></div>
+            <div class="about-section-row">
+                <div class="about-section-col-a">
+                    <div class="about">
+                        <p class="paragraph">
+                            People in the Himalayas believe that there’s a snowman that is covered with brown, grey or
+                            white hair and is sometimes depicted as having large, sharp teeth. They call it Yeti, living
+                            in
+                            Himalayas, thus <strong>Himalayan Yeti!</strong><br>
+                            We don’t know, we have never seen a Yeti, but we have seen plastics in the Himalayas, we
+                            have seen irresponsible tourists coming in, boozing, partying and imbalancing the natural
+                            habita. What we have also seen is the youth migrating to urban cities leaving behind their
+                            land, fertile
+                            soil and also their parents. Leaving behind everything can never be questionable, isn’t it?
+                            Certainly it is, as what they’ve left
+                            is diamond in the search of gold.<br>
+                            There are ample opportunities available in the rural India which is unexplored and if
+                            approached
+                            in a righteous way, it can help us reunite rural families and open an array of possibilities
+                            and
+                            scope for development.<br>
+                            <strong>Himalayan Yeti</strong>, a section 8 company registered under the companies act of
+                            2013, having 12A
+                            and 80G status is a <strong>foundation for meaningful purpose</strong>. The organization was
+                            established in
+                            2019 by <strong>Nagender Singh </strong>for the sole purpose to fight plastic menace in
+                            Ladakh region, but with
+                            time, our mission changed and became more holistic.<br>
+                            <strong><i>Today our mission is to Bring the Youth Back and help them rehabilitate in their
+                                    rural villages
+                                    with their families, and create opportunities for them, so that they can be
+                                    innovators,
+                                    entrepreneurs, skilled-professionals, etc.</i></strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-section-col-b">
+                    <img src="{% static 'img\yeti.png' %}" alt="Yeti">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        AOS.init({
+            duration: 1200,
+        })
+
+    </script>
+
+
+    <!-- What united us -->
+    <div class="united">
+        <h1 class="main-heading">What United Us?</h1>
+    </div>
+    <div class="united-container" id="scroll-to">
+        <div class="united-cells" data-aos="flip-left">
+            <div class="section-first">
+                <img src="{% static 'img\bureaucracy.jpg' %}" alt="ESG">
+            </div>
+            <div class="section-second">
+                <h3>Failed Bureaucracy</h3>
+            </div>
+        </div>
+
+        <div class="united-cells" data-aos="flip-left">
+            <div class="section-first">
+                <img src="{% static 'img\corrupt.jpg' %}" alt="ESG">
+            </div>
+            <div class="section-second">
+                <h3> Corrupt Ecosystem </h3>
+            </div>
+        </div>
+
+        <div class="united-cells" data-aos="flip-left">
+            <div class="section-first">
+                <img src="{% static 'img\enthusiasm.jpg' %}" alt="ESG">
+            </div>
+            <div class="section-second">
+                <h3>Enthusiasm for Impact </h3>
+            </div>
+        </div>
+
+        <div class="united-cells" id="fadein-united" data-aos="flip-left">
+            <div class="section-first">
+                <img src="{% static 'img\esg.jpg' %}" alt="ESG">
+            </div>
+            <div class="section-second">
+                <h3>Alarming ESG related issues</h3>
             </div>
         </div>
     </div>
 
 
-    <table>
-        <h1 class="heading">Team Members</h1>
-        <tr>
-            <td class="invisible"></td>
-            <td><img src="{% static 'img/nagender.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Nagender Singh</h3>
-                    <h5>Co-Founder Director</h5>
-                </div>
-            </td>
-            <td class="invisible"></td>
-        </tr>
-        <tr>
-            <td><img src="{% static 'img/vikram.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Vikram Kothari</h3>
-                    <h5>Advisor Director</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/vaishali.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Vaishali Thakur</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/shivam.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Shivam Batra</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="{% static 'img/arushi.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Aarushi Rishi</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/shifa.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Shifa Rizvi</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/sunny.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Sunny Bisht</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="{% static 'img/sanyam.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Sanyam Rastogi</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/megha.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Megha Gupta</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/sushil.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Sushil Kumar</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="{% static 'img/bhavit.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Bhavit Pant</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/federico.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Federico Frattini</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-            <td><img src="{% static 'img/mukul.png' %}" alt="Photo" width="100px" height="100px;">
-                <div class="inf">
-                    <h3>Mukul Sharma</h3>
-                    <h5>Founder</h5>
-                </div>
-            </td>
-        </tr>
-    </table>
 
 
+
+    <!-- Impact we created -->
+
+    <script>
+        $(document).ready(function () {
+            $("#impact-button").click(function () {
+                $(".involve").slideToggle("slow");
+            });
+            $("#impact-button").click(function () {
+                $('html,body').animate({
+                    scrollTop: $("#impact-button").offset().top
+                },
+                    'slow');
+            });
+        });
+    </script>
+
+
+
+
+    <div class="button-center">
+        <button id="impact-button">Impact We Created</button>
+    </div>
+    <section class="section involve">
+        <div class="container">
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\pagir.png' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\wiproearthian.png' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\tsangda.png' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\cleanindus.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\kitabokipathshala.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img\kitabokipathshala.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Title goes here</h1>
+                    </div>
+                    <div class="details">
+                        <p>Content goes here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- footer -->
     <section class="section footer">
         <div class="container">
             <div class="row">
@@ -195,10 +274,18 @@
                         <h4 class="text-capitalize mb-4 text-white">Quick Links</h4>
 
                         <ul class="list-unstyled footer-menu lh-35">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="csr.html#logosection">Partners</a></li>
+                            <li><a href="#">SDG</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'createuser' %}">Create User</a></li>
+                            <li><a href="{% url 'userlogout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -212,7 +299,6 @@
             </div>
         </div>
     </section>
-
 </body>
 
 </html>

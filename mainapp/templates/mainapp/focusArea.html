@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYF | Focus Area</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'css/focusArea.css' %}">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS63244.jpg" alt="logo">
+        </div>
+
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <div class="list">
+            <!-- <input type="text" placeholder="Type to search"> -->
+        <div class="list">
+            <!-- <input type="text" placeholder="Type to search"> -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'focusArea' %}">Focus Areas</a></li>
+            <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
+            <li><a href="{% url 'help' %}">Blogs & article</a></li>
+        </div>
+        </div>
+    </nav>
+
+
+    <!-- focus-main -->
+
+    <div class="focusbox">
+        <div class="focusbox-div focusbox-div-1"
+            style="background-image: linear-gradient(0deg,rgba(0, 135, 68, 0.50),
+            rgba(0, 0, 0, 0.5)), 
+            url({% static 'img\focusImg\susliv_1_bw.jpg' %});">
+            <div class="text-box">
+                <div class="tb-titel">
+                    <span class="tb-titel-txt">Sustainable Livelihoods</span>
+                </div>
+                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries
+                </div>
+                <div class="tb-btn">
+                    <div class="tlink">
+                        <a href="#" target="_blank" class="modern-link">Focus on Government
+                            Schemes &#8594</a>
+                    </div>
+                    <div class="tlink">
+                        <a href="#" target="_blank" class="modern-link">Focus on creating market
+                            linkages &#8594</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="focusbox-div focusbox-div-3"
+            style="background-image: linear-gradient(0deg,rgba(0, 87, 231, 0.5),rgba(0, 0, 0, 0.5)), 
+            url({% static 'img\focusImg\envsus_1_bw.jpg' %});">
+            <div class="text-box">
+                <div class="tb-titel">
+                    <span class="tb-titel-txt">Environmental Sustainability </span>
+                </div>
+                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries
+                </div>
+            </div>
+        </div>
+
+        <div class="focusbox-div focusbox-div-2"
+            style="background-image: linear-gradient(0deg,rgba(214, 45, 32, 0.5),rgba(0, 0, 0, 0.5)), 
+            url({% static 'img\focusImg\susliv_3_bw.jpg' %});">
+            <div class="text-box">
+                <div class="tb-titel">
+                    <span class="tb-titel-txt">Social Well Being </span>
+
+                </div>
+                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries
+                </div>
+            </div>
+        </div>
+
+        <div class="focusbox-div focusbox-div-5"
+            style="background-image: linear-gradient(0deg,rgba(243, 119, 53, 0.50),rgba(0, 0, 0, 0.5)), 
+            url({% static 'img\focusImg\edu_1_bw.jpg' %});">
+            <div class="text-box">
+                <div class="tb-titel">
+                    <span class="tb-titel-txt">Education & Skill Development </span>
+                </div>
+                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="focusbox-div focusbox-div-4"
+            style="background-image: linear-gradient(0deg,rgba(148, 156, 0, 0.716),rgba(0, 0, 0, 0.5)), 
+            url({% static 'img\focusImg\gov_1_bw.jpg' %});">
+            <div class="text-box">
+                <div class="tb-titel">
+                    <span class="tb-titel-txt">Governance </span>
+                </div>
+                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries
+                </div>
+                <div class="tb-btn">
+                    <div class="tlink">
+                        <a href="#" target="_blank" class="modern-link">Swachh Survekshan
+                            &#8594</a>
+                    </div>
+                    <div class="tlink">
+                        <a href="#" target="_blank" class="modern-link">Circular Economy
+                            &#8594</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- footer -->
+    <section class="section footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <div class="widget">
+                        <h2>Connect with us</h2>
+                        <div class="social">
+                            <div class="person">
+                                <h4>Nagender Singh</h4><br>
+                                <h5>Founder Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <a href="#"><i class="material-icons call"></i>+2(305) 587-3407</a><br>
+                                <a href="#"><i class="material-icons email"></i>himalayanyetifoundation@gmail.com</a>
+                            </div>
+                            <div class="person">
+                                <h4>Vikram Kothari</h4><br>
+                                <h5>Advisor Director</h5>
+                                <h5>Himalayan Yeti Foundation</h5>
+                                <br>
+                                <a href="#"><i class="material-icons call"></i>+919650933677</a><br>
+                                <a href="#"><i class="material-icons email"></i>hyfconsultant@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="widget footer-widget">
+                        <h4 class="text-capitalize mb-4 text-white">Quick Links</h4>
+
+                        <ul class="list-unstyled footer-menu lh-35">
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="csr.html#logosection">Partners</a></li>
+                            <li><a href="#">SDG</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'createuser' %}">Create User</a></li>
+                            <li><a href="{% url 'userlogout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'userlogin' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row media">
+                <ul>
+                    <li><a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/instagram.svg' %}" alt=""></a></li>
+                    <li><a href=""><img src="{% static 'img/twitter.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
