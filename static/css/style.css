@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Signika+Negative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Times New Roman',"Roboto","Alegreya","Bitter","Signika Negative", sans-serif;
 }
 
 *,
@@ -8,6 +13,15 @@
 ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  color: #5F5F5F;
 }
 
 .navbar {
@@ -63,7 +77,6 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: "Montserrat", sans-serif;
   width: 150px;
   background-color: #e5e5e5;
   border: #213345;
@@ -82,7 +95,6 @@
 }
 
 .navbar .list li a {
-  font-family: "Montserrat", sans-serif;
   color: #000000;
   text-transform: capitalize;
   font-weight: 600;
@@ -93,6 +105,43 @@
 
 .navbar .list li a:hover {
   color: #5680e9;
+}
+
+.navbar .list li .btn-main,
+.navbar .list li .btn-small {
+  background: #5680e9;
+  border-color: #5680e9;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .list li .btn-main:hover,
+.navbar .list li .btn-small:hover {
+  background: #863bae;
+  color: #fff;
+  border-color: #863bae;
+}
+
+.navbar .list li .btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.navbar .list li .rounded {
+  border-radius: .25rem !important;
 }
 
 .navbar input[type=checkbox] {
@@ -156,7 +205,7 @@
   opacity: 0.9;
   padding: 100px 0;
   position: relative;
-  height: 100vh;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,14 +251,17 @@
 }
 
 .slider .container .row .col-lg-9 .block h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: normal;
   color: #fff;
 }
 
 @media (max-width: 700px) {
   .slider .container .row .col-lg-9 .block h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .slider .container .row .col-lg-9 .block p {
+    font-size: 1rem;
   }
 }
 
@@ -301,6 +353,92 @@
   padding: 100px 0;
 }
 
+.problems {
+  padding-bottom: 0;
+}
+
+.problems .container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.problems .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.problems .container .row .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #5680e9;
+  position: relative;
+}
+
+.problems .container .row .tabs .tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 50px;
+  cursor: pointer;
+}
+
+.problems .container .row .tabs .tab h3 {
+  font-size: 1rem;
+}
+
+.problems .container .row .tabs .tab .subpoints {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  border: 2px solid #5680e9;
+  border-top: none;
+}
+
+.problems .container .row .tabs .tab .subpoints .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  padding: 5px 10px;
+  gap: 20px;
+}
+
+.problems .container .row .tabs .tab .subpoints .block ul {
+  display: none;
+}
+
 .latest {
   padding: 100px 0;
   background-color: #fff;
@@ -333,7 +471,6 @@
 }
 
 .latest .container .row .col-lg-7 .section-title .heading {
-  font-family: "Bitter", serif;
   font-size: 60px;
   font-weight: 1000;
   line-height: 100px;
@@ -341,7 +478,6 @@
 }
 
 .latest .container .row .col-lg-7 .section-title h2 {
-  font-family: "Bitter", serif;
   font-size: 50px;
   font-weight: 900;
   color: #000000;
@@ -414,7 +550,7 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  min-width: 0;
+  width: 100%;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -465,7 +601,6 @@
 
 .latest .container .row .col-lg-5 .card .row .card-body .input-email {
   display: block;
-  font-family: "Montserrat", sans-serif;
   width: 100%;
   background-color: #e5e5e5;
   border: #213345;
@@ -641,25 +776,31 @@
 .latest .container .row .col-lg-4 .card .row .card-body .btn-main,
 .latest .container .row .col-lg-4 .card .row .card-body .btn-small {
   background: #5680e9;
+  background: transparent;
   border-color: #5680e9;
   color: #fff;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.latest .container .row .col-lg-4 .card .row .card-body .danger {
-  background: red;
-  border-color: red;
-  color: #fff;
+.latest .container .row .col-lg-4 .card .row .card-body .primary {
+  background: transparent;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  color: #000000;
+}
+
+.latest .container .row .col-lg-4 .card .row .card-body .danger {
+  background: transparent;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: red;
 }
 
 .latest .container .row .col-lg-4 .card .row .card-body .btn-main:hover,
 .latest .container .row .col-lg-4 .card .row .card-body .btn-small:hover {
-  background: #863bae;
-  color: #fff;
-  border-color: #863bae;
+  cursor: pointer;
+  color: #5680e9;
 }
 
 .latest .container .row .col-lg-4 .card .row .card-body .btn {
@@ -667,7 +808,7 @@
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  padding: .75rem 2rem;
+  padding: .15rem 0.2rem;
   text-transform: uppercase;
   border-radius: 0;
   -webkit-transition: all 0.2s ease;
@@ -697,6 +838,19 @@
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+}
+
+@media (max-width: 800px) {
+  .latest .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .latest .container .row .col-lg-5 {
+    padding-inline: 0;
+  }
+  .latest .container .row .col-lg-4 {
+    padding-inline: 0;
+  }
 }
 
 .line {
@@ -733,7 +887,6 @@
 }
 
 .involve .container .row .col-lg-7 .section-title .heading {
-  font-family: "Bitter", serif;
   font-size: 60px;
   font-weight: 1000;
   line-height: 100px;
@@ -901,7 +1054,6 @@
 }
 
 .urgency .container .row .col-lg-8 .section-title .heading {
-  font-family: "Bitter", serif;
   font-size: 60px;
   font-weight: 1000;
   color: #000000;
@@ -1078,6 +1230,12 @@
           justify-content: center !important;
 }
 
+@media (max-width: 800px) {
+  .urgency .container .row1 {
+    margin-inline: 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .urgency .container .right-border {
     border-right: none;
@@ -1188,7 +1346,6 @@
 }
 
 .focus .container .row .section-title .heading {
-  font-family: "Bitter", serif;
   font-size: 60px;
   font-weight: 1000;
   color: #000000;
@@ -1436,6 +1593,10 @@
   line-height: 45px;
 }
 
+.footer .container .row .col-2 .widget ul li a:hover {
+  color: #5680e9;
+}
+
 @media screen and (max-width: 800px) {
   .footer .container .row .col-1 {
     -webkit-box-flex: 1;
@@ -1478,5 +1639,10 @@
 .footer .container .media ul li a img:hover {
   background-color: #fe6e9a;
 }
+
+@media (max-width: 800px) {
+  .footer {
+    padding-inline: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
-/* latest v1 */
