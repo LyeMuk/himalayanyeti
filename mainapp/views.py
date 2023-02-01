@@ -58,7 +58,7 @@ def help(request):
     global labelvalue
     labelvalue = int(request.GET.get('label', labelvalue))
     if labelvalue==0:
-        object_list = article.objects.filter(category=5).order_by('-postdate') # category 5 belongs to help
+        object_list = article.objects.filter(category=5).order_by('-postdate') # category 5 belongs to help/blog
     else:
         object_list = article.objects.filter(label=labelvalue).order_by('-postdate')
 
@@ -121,7 +121,10 @@ def addarticle(request):
     return render(request, "mainapp/addarticle.html", contex)
 
 def about(request):
-    return render(request, "mainapp/about.html")
+    contex={}
+    project = article.objects.filter(category=7).order_by('-postdate')[0:6]
+    contex['project'] = project
+    return render(request, "mainapp/about.html", contex)
 
 @login_required(login_url='/userlogin')
 def deletearticle(request, num):

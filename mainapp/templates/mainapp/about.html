@@ -163,77 +163,38 @@
         <div class="container">
 
             <div class="card-container">
-                <div class="card">
-                    <div class="img">
-                        <img src="{% static 'img\pagir.png' %}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>Title goes here</h1>
-                    </div>
-                    <div class="details">
-                        <p>Content goes here</p>
-                    </div>
-                </div>
+
+                {% for prj in project %}
 
                 <div class="card">
                     <div class="img">
-                        <img src="{% static 'img\wiproearthian.png' %}" alt="">
+                        <img src="{{prj.headerimage.url}}" alt="">
                     </div>
                     <div class="title">
-                        <h1>Title goes here</h1>
+                        <h1>{{prj.title|slice:":100"}}</h1>
                     </div>
                     <div class="details">
-                        <p>Content goes here</p>
+                        <p>{{ prj.body|safe|slice:":150" }}</p>
+                    </div>
+                    <div class="cardbtns">
+                        <a href="{% url 'viewarticle' prj.bid %}">
+                            Learn more &#8594
+                        </a>
+                        {% if user.is_authenticated %}
+                        <a class="update" href="{% url 'updatearticle' prj.bid %}">
+                            &#9998;
+                        </a>
+                        <a class="delete" href="{% url 'deletearticle' prj.bid %}">
+                            &#128465;
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="img">
-                        <img src="{% static 'img\tsangda.png' %}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>Title goes here</h1>
-                    </div>
-                    <div class="details">
-                        <p>Content goes here</p>
-                    </div>
-                </div>
+                {% endfor %}
 
-                <div class="card">
-                    <div class="img">
-                        <img src="{% static 'img\cleanindus.jpg' %}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>Title goes here</h1>
-                    </div>
-                    <div class="details">
-                        <p>Content goes here</p>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="img">
-                        <img src="{% static 'img\kitabokipathshala.jpg' %}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>Title goes here</h1>
-                    </div>
-                    <div class="details">
-                        <p>Content goes here</p>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="img">
-                        <img src="{% static 'img\kitabokipathshala.jpg' %}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>Title goes here</h1>
-                    </div>
-                    <div class="details">
-                        <p>Content goes here</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

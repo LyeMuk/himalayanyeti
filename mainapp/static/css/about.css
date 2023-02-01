@@ -673,3 +673,19 @@ border-right: 40px solid #3366CC;
 .footer .container .media ul li a img:hover {
   background-color: #fe6e9a;
 }
+
+.cardbtns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.update {
+  color: #91C483;
+}
+
+.delete {
+  color: #FF6464;
+}
+a{
+  text-decoration: none;
+}
