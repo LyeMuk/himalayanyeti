@@ -17,7 +17,7 @@ from django.utils.html import strip_tags
 
 # Global variables
 
-labelvalue=0                            #used in help function to keep track of filter
+labelvalue=0                            #used in help function to keep track of filter in help section
 
 # Create your views here.
 
@@ -182,7 +182,7 @@ def csr(request):
     return render(request, "mainapp/csr.html", contex)
 
 def getinvolved(request):
-    contex={}
+    contex = {}
     return render(request, "mainapp/getinvolved.html", contex)
 
 def focusArea(request):
