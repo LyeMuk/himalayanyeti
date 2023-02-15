@@ -9,9 +9,10 @@
     <title>HYF | About</title>
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 </head>
 
 <body>
@@ -82,58 +83,207 @@
         </div>
     </div>
 
-    <script>
+    <section class="section-vision-mission">
+        <h1 class="title-center">Our Vision & Mission</h1>
+        <div class="wrapper-line">
+            <div class="divider div-transparent div-dot"></div>
+        </div>
+        <div class="vision-container">
+            <section class="hidden-vision">
+                <div class="vision-card-container">
+                    <div class="vision-card"
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url({% static 'img/visionbg.jpg' %}); background-repeat:no-repeat;background-size:100% 100%;">
+                        <div class="vision-content-center">
+                            <img src="{% static 'img/vision.png' %}" alt="Vision">
+                            <h2>Vision</h2>
+                            <p>To embrace circularity in India and promote reverse migration by working upon rural
+                                development, and sustainable livelihoods</p>
+                        </div>
+                    </div>
 
-        AOS.init({
-            duration: 1200,
-        })
+                    <div class="vision-card"
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url({% static 'img/missionbg.jpg' %});background-repeat:no-repeat;background-size: 100% 100%;">
+                        <div class="vision-content-center">
+                            <img src="{% static 'img/mission.png' %}" alt="Vision">
+                            <h2>Mission</h2>
+                            <p>To impact 5 million people by 2030 and provide them sustainable income soure and a green
+                                economy</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 
-    </script>
 
 
-    <!-- What united us -->
-    <div class="united">
-        <h1 class="main-heading">What United Us?</h1>
-    </div>
-    <div class="united-container" id="scroll-to">
-        <div class="united-cells" data-aos="flip-left">
-            <div class="section-first">
-                <img src="{% static 'img\bureaucracy.jpg' %}" alt="ESG">
-            </div>
-            <div class="section-second">
-                <h3>Failed Bureaucracy</h3>
+
+    <section class="section-team">
+        <div class="team-bg"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'img/teambg.jpg' %});background-repeat: no-repeat;width:100;background-size: cover;background-position: center;">
+            <h1 class="team-center">Our Team</h1>
+        </div>
+        <div class="team-container">
+
+            <div class="team-card-container">
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img">
+                        <img src="{% static 'img/member.jpg' %}" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h1>John Doe</h1>
+                    </div>
+                    <div class="team-details">
+                        <p>Designation</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="united-cells" data-aos="flip-left">
-            <div class="section-first">
-                <img src="{% static 'img\corrupt.jpg' %}" alt="ESG">
-            </div>
-            <div class="section-second">
-                <h3> Corrupt Ecosystem </h3>
-            </div>
-        </div>
-
-        <div class="united-cells" data-aos="flip-left">
-            <div class="section-first">
-                <img src="{% static 'img\enthusiasm.jpg' %}" alt="ESG">
-            </div>
-            <div class="section-second">
-                <h3>Enthusiasm for Impact </h3>
-            </div>
-        </div>
-
-        <div class="united-cells" id="fadein-united" data-aos="flip-left">
-            <div class="section-first">
-                <img src="{% static 'img\esg.jpg' %}" alt="ESG">
-            </div>
-            <div class="section-second">
-                <h3>Alarming ESG related issues</h3>
-            </div>
-        </div>
-    </div>
-
-
+    </section>
 
 
 
@@ -157,50 +307,48 @@
 
 
     <div class="button-center">
-        <button id="impact-button">Impact We Created</button>
+        <button id="impact-button">Our Projects<span class="">&nbsp;&#8250;&#8250;</span></button>
     </div>
-    <section class="section involve">
-        <div class="container">
-
-            <div class="card-container">
-
-                {% for prj in project %}
-
-                <div class="card">
-                    <div class="img">
-                        <img src="{{prj.headerimage.url}}" alt="">
-                    </div>
-                    <div class="title">
-                        <h1>{{prj.title|slice:":100"}}</h1>
-                    </div>
-                    <div class="details">
-                        <p>{{ prj.body|safe|slice:":150" }}</p>
-                    </div>
-                    <div class="cardbtns">
-                        <a href="{% url 'viewarticle' prj.bid %}">
-                            Learn more &#8594
-                        </a>
-                        {% if user.is_authenticated %}
-                        <a class="update" href="{% url 'updatearticle' prj.bid %}">
-                            &#9998;
-                        </a>
-                        <a class="delete" href="{% url 'deletearticle' prj.bid %}">
-                            &#128465;
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-
-                {% endfor %}
+    <div class="project-area">
 
 
 
+        {% for prj in project %}
+        <div class="project-item">
+            <img class="project-item-image" src="{{prj.headerimage.url}}" alt="ni pata kaha guya image">
+            <div class="project-item-content">
+                <span class="projext-item-content-titel">
+                    {{prj.title|slice:":100"}}
+                </span>
+                <!-- <span class="projext-item-content-text">
+                    {{ prj.body|safe|slice:":100" }}...
+                </span> -->
+            </div>
+            <div class="project-item-buttons">
+                <a href="{% url 'viewarticle' prj.bid %}" class="learn-more">
+                    Learn more &#10172;
+                </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'updatearticle' prj.bid %}" class="edit-btn">
+                    &#9998;
+                </a>
+                <a href="{% url 'deletearticle' prj.bid %}" class="delete-btn">
+                    &#128465;
+                </a>
+                {% endif %}
             </div>
         </div>
-    </section>
+        {% endfor %}
 
 
 
+
+    </div>
+
+
+
+
+    <br>
 
 
     <!-- footer -->
@@ -236,10 +384,10 @@
 
                         <ul class="list-unstyled footer-menu lh-35">
                             <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="csr.html#logosection">Partners</a></li>
+                            <li><a href="{% url 'help' %}">Blogs</a></li>
+                            <li><a href="index#latesthome">Events</a></li>
+                            <li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+                            <li><a href="csr#logosection">Partners</a></li>
                             <li><a href="#">SDG</a></li>
                             {% if user.is_authenticated %}
                             <li><a href="{% url 'createuser' %}">Create User</a></li>

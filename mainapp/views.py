@@ -191,3 +191,7 @@ def getinvolved(request):
 def focusArea(request):
     contex={}
     return render(request, "mainapp/focusArea.html", contex)
+
+def testimonial(request):
+    contex={}
+    return render(request, "mainapp/testimonial.html", contex)

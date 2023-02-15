@@ -1,0 +1,861 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', "Roboto", "Alegreya", "Bitter", "Signika Negative", sans-serif;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  color: #5F5F5F;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+  padding: 0.1rem 2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 11px 2px #999797;
+          box-shadow: 0 0 11px 2px #999797;
+}
+
+.navbar .logo img {
+  width: 50px;
+}
+
+.navbar .list {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.navbar .list input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 150px;
+  background-color: #e5e5e5;
+  border: #213345;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+  padding: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar .list li {
+  list-style: none;
+}
+
+.navbar .list li a {
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 30px 10px;
+  text-decoration: none;
+}
+
+.navbar .list li a:hover {
+  color: #5680e9;
+}
+
+.navbar .list li .btn-main,
+.navbar .list li .btn-small {
+  background: #5680e9;
+  border-color: #5680e9;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navbar .list li .btn-main:hover,
+.navbar .list li .btn-small:hover {
+  background: #863bae;
+  color: #fff;
+  border-color: #863bae;
+}
+
+.navbar .list li .btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .75rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.navbar .list li .rounded {
+  border-radius: .25rem !important;
+}
+
+.navbar input[type=checkbox] {
+  display: none;
+}
+
+.navbar .hamburger {
+  display: none;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar .list {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .navbar .list input {
+    display: none;
+  }
+  .navbar .list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar .list li:hover {
+    background-color: #5680e9;
+    -webkit-transition: ease 0.4s;
+    transition: ease 0.4s;
+  }
+  .navbar .list li:hover a {
+    color: #fff;
+  }
+  .navbar input[type=checkbox]:checked ~ .list {
+    display: block;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+}
+
+.section,
+.donation {
+  padding: 50px 0;
+}
+
+.section .container,
+.donation .container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section .container .heading,
+.donation .container .heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 25px;
+}
+
+.section .container .row,
+.donation .container .row {
+  display: -ms-flexbox;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr;
+}
+
+.section .container .row .static,
+.donation .container .row .static {
+  background-color: #5680e9;
+}
+
+.section .container .row .static .card,
+.donation .container .row .static .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 15px 25px;
+  border: 1px solid #5680e9;
+  color: #fff;
+}
+
+.section .container .row .static .card .heading,
+.donation .container .row .static .card .heading {
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.section .container .row .static .card .details,
+.donation .container .row .static .card .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.section .container .row .static .card .details .copy,
+.donation .container .row .static .card .details .copy {
+  cursor: pointer;
+}
+
+.section .container .row .static .card .details .copy:hover,
+.donation .container .row .static .card .details .copy:hover {
+  font-weight: 800;
+}
+
+.section .container .row .dynamic .card,
+.donation .container .row .dynamic .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 100%;
+  padding: 15px 25px;
+  border: 1px solid #5680e9;
+}
+
+.section .container .row .dynamic .card .heading,
+.donation .container .row .dynamic .card .heading {
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #5680e9;
+}
+
+.section .container .row .dynamic .card .form .name,
+.section .container .row .dynamic .card .form .email,
+.section .container .row .dynamic .card .form .phone,
+.section .container .row .dynamic .card .form .amount,
+.section .container .row .dynamic .card .form .Comment,
+.donation .container .row .dynamic .card .form .name,
+.donation .container .row .dynamic .card .form .email,
+.donation .container .row .dynamic .card .form .phone,
+.donation .container .row .dynamic .card .form .amount,
+.donation .container .row .dynamic .card .form .Comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.section .container .row .dynamic .card .form .name input,
+.section .container .row .dynamic .card .form .name textarea,
+.section .container .row .dynamic .card .form .email input,
+.section .container .row .dynamic .card .form .email textarea,
+.section .container .row .dynamic .card .form .phone input,
+.section .container .row .dynamic .card .form .phone textarea,
+.section .container .row .dynamic .card .form .amount input,
+.section .container .row .dynamic .card .form .amount textarea,
+.section .container .row .dynamic .card .form .Comment input,
+.section .container .row .dynamic .card .form .Comment textarea,
+.donation .container .row .dynamic .card .form .name input,
+.donation .container .row .dynamic .card .form .name textarea,
+.donation .container .row .dynamic .card .form .email input,
+.donation .container .row .dynamic .card .form .email textarea,
+.donation .container .row .dynamic .card .form .phone input,
+.donation .container .row .dynamic .card .form .phone textarea,
+.donation .container .row .dynamic .card .form .amount input,
+.donation .container .row .dynamic .card .form .amount textarea,
+.donation .container .row .dynamic .card .form .Comment input,
+.donation .container .row .dynamic .card .form .Comment textarea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #999797;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+  outline: none;
+  padding: 2px 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.section .container .row .dynamic .card .form .name input::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .email input::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .phone input::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .amount input::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .name input::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .email input::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea::-webkit-input-placeholder {
+  color: #b9b9b9;
+}
+
+.section .container .row .dynamic .card .form .name input:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email input:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone input:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount input:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name input:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email input:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea:-ms-input-placeholder {
+  color: #b9b9b9;
+}
+
+.section .container .row .dynamic .card .form .name input::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email input::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone input::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount input::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name input::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email input::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea::-ms-input-placeholder {
+  color: #b9b9b9;
+}
+
+.section .container .row .dynamic .card .form .name input::placeholder,
+.section .container .row .dynamic .card .form .name textarea::placeholder,
+.section .container .row .dynamic .card .form .email input::placeholder,
+.section .container .row .dynamic .card .form .email textarea::placeholder,
+.section .container .row .dynamic .card .form .phone input::placeholder,
+.section .container .row .dynamic .card .form .phone textarea::placeholder,
+.section .container .row .dynamic .card .form .amount input::placeholder,
+.section .container .row .dynamic .card .form .amount textarea::placeholder,
+.section .container .row .dynamic .card .form .Comment input::placeholder,
+.section .container .row .dynamic .card .form .Comment textarea::placeholder,
+.donation .container .row .dynamic .card .form .name input::placeholder,
+.donation .container .row .dynamic .card .form .name textarea::placeholder,
+.donation .container .row .dynamic .card .form .email input::placeholder,
+.donation .container .row .dynamic .card .form .email textarea::placeholder,
+.donation .container .row .dynamic .card .form .phone input::placeholder,
+.donation .container .row .dynamic .card .form .phone textarea::placeholder,
+.donation .container .row .dynamic .card .form .amount input::placeholder,
+.donation .container .row .dynamic .card .form .amount textarea::placeholder,
+.donation .container .row .dynamic .card .form .Comment input::placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea::placeholder {
+  color: #b9b9b9;
+}
+
+.section .container .row .dynamic .card .form .name input:focus,
+.section .container .row .dynamic .card .form .name textarea:focus,
+.section .container .row .dynamic .card .form .email input:focus,
+.section .container .row .dynamic .card .form .email textarea:focus,
+.section .container .row .dynamic .card .form .phone input:focus,
+.section .container .row .dynamic .card .form .phone textarea:focus,
+.section .container .row .dynamic .card .form .amount input:focus,
+.section .container .row .dynamic .card .form .amount textarea:focus,
+.section .container .row .dynamic .card .form .Comment input:focus,
+.section .container .row .dynamic .card .form .Comment textarea:focus,
+.donation .container .row .dynamic .card .form .name input:focus,
+.donation .container .row .dynamic .card .form .name textarea:focus,
+.donation .container .row .dynamic .card .form .email input:focus,
+.donation .container .row .dynamic .card .form .email textarea:focus,
+.donation .container .row .dynamic .card .form .phone input:focus,
+.donation .container .row .dynamic .card .form .phone textarea:focus,
+.donation .container .row .dynamic .card .form .amount input:focus,
+.donation .container .row .dynamic .card .form .amount textarea:focus,
+.donation .container .row .dynamic .card .form .Comment input:focus,
+.donation .container .row .dynamic .card .form .Comment textarea:focus {
+  border-bottom: 1px solid #5680e9;
+  color: #5680e9;
+}
+
+.section .container .row .dynamic .card .form .name input:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .email input:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .phone input:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .amount input:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input:focus::-webkit-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .name input:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .email input:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input:focus::-webkit-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea:focus::-webkit-input-placeholder {
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  font-size: x-small;
+  position: absolute;
+  top: 0;
+  color: #5680e9;
+  z-index: 1;
+}
+
+.section .container .row .dynamic .card .form .name input:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email input:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone input:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount input:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input:focus:-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name input:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email input:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input:focus:-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea:focus:-ms-input-placeholder {
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  font-size: x-small;
+  position: absolute;
+  top: 0;
+  color: #5680e9;
+  z-index: 1;
+}
+
+.section .container .row .dynamic .card .form .name input:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .name textarea:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email input:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .email textarea:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone input:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .phone textarea:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount input:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .amount textarea:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment input:focus::-ms-input-placeholder,
+.section .container .row .dynamic .card .form .Comment textarea:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name input:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .name textarea:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email input:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .email textarea:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone input:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .phone textarea:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount input:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .amount textarea:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment input:focus::-ms-input-placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea:focus::-ms-input-placeholder {
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  font-size: x-small;
+  position: absolute;
+  top: 0;
+  color: #5680e9;
+  z-index: 1;
+}
+
+.section .container .row .dynamic .card .form .name input:focus::placeholder,
+.section .container .row .dynamic .card .form .name textarea:focus::placeholder,
+.section .container .row .dynamic .card .form .email input:focus::placeholder,
+.section .container .row .dynamic .card .form .email textarea:focus::placeholder,
+.section .container .row .dynamic .card .form .phone input:focus::placeholder,
+.section .container .row .dynamic .card .form .phone textarea:focus::placeholder,
+.section .container .row .dynamic .card .form .amount input:focus::placeholder,
+.section .container .row .dynamic .card .form .amount textarea:focus::placeholder,
+.section .container .row .dynamic .card .form .Comment input:focus::placeholder,
+.section .container .row .dynamic .card .form .Comment textarea:focus::placeholder,
+.donation .container .row .dynamic .card .form .name input:focus::placeholder,
+.donation .container .row .dynamic .card .form .name textarea:focus::placeholder,
+.donation .container .row .dynamic .card .form .email input:focus::placeholder,
+.donation .container .row .dynamic .card .form .email textarea:focus::placeholder,
+.donation .container .row .dynamic .card .form .phone input:focus::placeholder,
+.donation .container .row .dynamic .card .form .phone textarea:focus::placeholder,
+.donation .container .row .dynamic .card .form .amount input:focus::placeholder,
+.donation .container .row .dynamic .card .form .amount textarea:focus::placeholder,
+.donation .container .row .dynamic .card .form .Comment input:focus::placeholder,
+.donation .container .row .dynamic .card .form .Comment textarea:focus::placeholder {
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+  font-size: x-small;
+  position: absolute;
+  top: 0;
+  color: #5680e9;
+  z-index: 1;
+}
+
+.section .container .row .dynamic .card .form .email::after,
+.donation .container .row .dynamic .card .form .email::after {
+  content: "We'll never share your email with anyone else.";
+  color: #9bb0e3;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+  font-size: x-small;
+}
+
+.section .container .row .dynamic .card .form .amount::after,
+.donation .container .row .dynamic .card .form .amount::after {
+  content: "Please enter your donation amount.";
+  color: #9bb0e3;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+  font-size: x-small;
+}
+
+.section .container .row .dynamic .card .form .btn-main,
+.section .container .row .dynamic .card .form .btn-small,
+.donation .container .row .dynamic .card .form .btn-main,
+.donation .container .row .dynamic .card .form .btn-small {
+  background: #5680e9;
+  border-color: #5680e9;
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.section .container .row .dynamic .card .form .btn-main:hover,
+.section .container .row .dynamic .card .form .btn-small:hover,
+.donation .container .row .dynamic .card .form .btn-main:hover,
+.donation .container .row .dynamic .card .form .btn-small:hover {
+  background: #863bae;
+  color: #fff;
+  border-color: #863bae;
+}
+
+.section .container .row .dynamic .card .form .btn,
+.donation .container .row .dynamic .card .form .btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.section .container .row .dynamic .card .form .rounded,
+.donation .container .row .dynamic .card .form .rounded {
+  border-radius: .25rem !important;
+}
+
+@media (max-width: 800px) {
+  .section .container .row,
+  .donation .container .row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  padding-top: 25px;
+  padding-inline: 50px;
+  padding-bottom: 5px;
+  background-color: #000000;
+}
+
+.footer .container {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto auto;
+}
+
+.footer .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .container .row .col-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 100%;
+}
+
+.footer .container .row .col-1 h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 75px;
+}
+
+@media (max-width: 700px) {
+  .footer .container .row .col-1 .social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .container .row .col-1 .social .person {
+    padding-bottom: 25px;
+  }
+}
+
+.footer .container .row .col-1 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+}
+
+.footer .container .row .col-1 .social .person {
+  padding-right: 15px;
+}
+
+.footer .container .row .col-1 .social .person h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer .container .row .col-1 .social .person h5 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer .container .row .col-1 .social .person a {
+  text-decoration: none;
+  color: #b9b9b9;
+}
+
+.footer .container .row .col-1 .social .person a .call::before {
+  content: "call";
+  font-size: small;
+  margin-right: 10px;
+  color: #5680e9;
+}
+
+.footer .container .row .col-1 .social .person a .email::before {
+  content: "email";
+  font-size: small;
+  margin-right: 10px;
+  color: #5680e9;
+}
+
+.footer .container .row .col-1 .social .person a:hover {
+  color: #fe6e9a;
+}
+
+.footer .container .row .col-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  max-width: 100%;
+}
+
+.footer .container .row .col-2 .widget .text-capitalize {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 75px;
+}
+
+.footer .container .row .col-2 .widget .mb-4 {
+  margin-bottom: 10px;
+}
+
+.footer .container .row .col-2 .widget .footer-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+}
+
+.footer .container .row .col-2 .widget ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .container .row .col-2 .widget ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.footer .container .row .col-2 .widget ul li a {
+  text-decoration: none;
+  color: #b9b9b9;
+  font-size: larger;
+  line-height: 45px;
+}
+
+.footer .container .row .col-2 .widget ul li a:hover {
+  color: #5680e9;
+}
+
+@media screen and (max-width: 800px) {
+  .footer .container .row .col-1 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .footer .container .row .col-2 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.footer .container .media {
+  padding-bottom: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .container .media ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 25px;
+}
+
+.footer .container .media ul li {
+  margin-right: 10px;
+}
+
+.footer .container .media ul li a img {
+  background-color: #5680e9;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.footer .container .media ul li a img:hover {
+  background-color: #fe6e9a;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    padding-inline: 0;
+  }
+}
+/*# sourceMappingURL=donation.css.map */

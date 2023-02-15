@@ -48,10 +48,13 @@
                 <div class="tb-titel">
                     <span class="tb-titel-txt">Sustainable Livelihoods</span>
                 </div>
-                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                    centuries
+                <div class="tb-para">This is one thematic area which is very close to the heart of our founding team, and, thus they’ve decided to merge this area with the government schemes so beneficiaries can get maximum benefit from the schemes and CSR activities, for instance: 
+                    <br>
+                    1. ODOP Scheme
+                    <br>
+                    2. Geographical Indication (GI) Scheme 
+                    <br>
+                    3. SFURTI Scheme
                 </div>
                 <div class="tb-btn">
                     <div class="tlink">
@@ -73,10 +76,13 @@
                 <div class="tb-titel">
                     <span class="tb-titel-txt">Environmental Sustainability </span>
                 </div>
-                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                    centuries
+                <div class="tb-para">As far as Environment Sustainability is concerned HYF is committed to work upon major areas of improvement for any given project, for instance: 
+                    <br>
+                    A) Water Footprints: We may develop projects to improve water footprints of large; medium, micro and small enterprises (MSMEs), by working upon system-design, process-improvements, etc. Also, rainwater harvesting, watershed development, drip-irrigation systems are something we may consider for futuristic CSR projects.
+                    <br>
+                    B) Carbon Footprints: Air is a blanket that not only protects us from harmful radiations and ultraviolet explosions but also keeps our body temperature normal. What if this air becomes unbreathable? Will it be liveable then? 22 out of 30 most polluted cities of the world are in India. No matter how much India works upon socio-economic development unless it purifies its air all its actions will go in vain. We at HYF can work with conglomerates, institutions, innovators and academicians in identifying and implementing solutions both for industries as well as individuals in reducing net negative externalities.
+                    Be it working upon carbon disclosures, stack emissions reduction arising from industries, farmlands, etc., we will be more than happy to undertake such projects. 
+                    
                 </div>
             </div>
         </div>
@@ -104,10 +110,12 @@
                 <div class="tb-titel">
                     <span class="tb-titel-txt">Education & Skill Development </span>
                 </div>
-                <div class="tb-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                    centuries
+                <div class="tb-para">India as a nation produces engineers, doctors and scientists at 10X faster than what the world does, but are we producing one of the best engineers or scientists in the world? The answer is No.
+                    Some of the most crucial sectors of today’s time don’t have the skills that are needed. According to a report 53% of the professionals don’t have the skills required to succeed in a company. In fact, 75% of the surveyed companies reported a skill gap in India.
+                    Schools and Colleges are still teaching subjects from the medieval era, and despite India being the hub of startups and technological innovations, none of the professors are ready to talk about building businesses in the Institutions. 
+                    Government do come up with the concept of Incubation centres in the Universities but that will be taking some time before it starts yielding results. 
+                    Furthermore, green jobs have a lot of potential in India, and with government initiatives on circular economy, resource efficiency, ESG, QHSE etc. it opens up a market for green professionals. 
+                    According to a report, the circular economy has a potential to create a US$ 220 billion market by 2030, thus creating 1.4 crore jobs in the next 5 - 7 years. 
                 </div>
             </div>
         </div>
@@ -178,10 +186,10 @@
 
                         <ul class="list-unstyled footer-menu lh-35">
                             <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="csr.html#logosection">Partners</a></li>
+                            <li><a href="{% url 'help' %}">Blogs</a></li>
+                            <li><a href="index#latesthome">Events</a></li>
+                            <li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+                            <li><a href="csr#logosection">Partners</a></li>
                             <li><a href="#">SDG</a></li>
                             {% if user.is_authenticated %}
                             <li><a href="{% url 'createuser' %}">Create User</a></li>

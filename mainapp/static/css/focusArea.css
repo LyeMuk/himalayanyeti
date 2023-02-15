@@ -358,6 +358,13 @@
     display: flex;
     flex-direction: row;
 }
+@media (max-width: 900px) {
+    .focusbox{
+        flex-direction: column;
+        min-height: 750px;
+        max-height: auto;
+    }
+}
 
 .focusbox-div {
     width: 100%;
@@ -370,11 +377,11 @@
 .focusbox-div .tb-para, .focusbox-div .tb-btn{
     display: none;
 }
-.focusbox-div:hover .tb-para, .focusbox-div:hover .tb-btn{
+.focusbox-div:hover .tb-para, .focusbox-div:hover .tb-btn, .focusbox-div:active .tb-para, .focusbox-div:active .tb-btn{
     display: block;
 }
 
-.focusbox-div:hover{
+.focusbox-div:hover, .focusbox-div:active{
     flex: 5;
     padding: 10px 10px 10px 10px;
 
@@ -446,7 +453,7 @@
     color: #bbbbbb;
     
 }
-.modern-link:hover{
+.modern-link:hover, .modern-link:active{
     color: #d0d0d0;
     text-decoration: solid underline #d0d0d0 2px;
     padding-bottom: 3px;

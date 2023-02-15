@@ -137,3 +137,94 @@ $(document).ready(function () {
         $("#ptnf2 ul").fadeOut(0);
     });
 });
+
+const readmore = document.querySelectorAll(".readmore");
+const unitecard = document.querySelector(".unitecard");
+const details = document.querySelector(".details");
+
+readmore.forEach(card => {
+    card.addEventListener('click', (e) => {
+        // e.target.parentElement.parentElement.style.flex = '80%'
+        e.target.parentElement.parentElement.classList.toggle('expand')
+        e.target.parentElement.previousElementSibling.classList.toggle('expand')
+        if (e.target.innerText == "READ LESS") {
+            e.target.innerText = "read more"
+        } else {
+            e.target.innerText = "read less"
+        }
+        // e.target.childNodes[0].textContent = 'Read Less'
+    }) 
+});
+
+const slider = document.querySelectorAll(".slideshow");
+const img = document.querySelectorAll(".slide");
+const count = document.querySelectorAll(".slide").length;
+// console.log(slider)
+
+
+slider.forEach(slide => {
+
+    const imgs = slide.children;
+    const count = slide.children.length;
+
+    // console.log(imgs)
+
+
+    setInterval(auto, 4000);
+
+    function position() {
+    let pos;
+    Array.from(imgs).forEach((img, i) => {
+        if (imgs[i].classList.contains("active")) {
+            pos = i;
+        }
+    });
+    // console.log(pos)
+    return pos;
+}
+
+function auto() {
+    // let pos = position();
+    let pos = position();
+    pos = pos + 1;
+    if (pos >= count) {
+        pos = 0;
+    } else {
+        pos = pos;
+    }
+
+    // console.log(pos)
+    Array.from(imgs).forEach((img, i) => {
+        // console.log(imgs[i])
+        imgs[i].classList.remove("active");
+    });
+    imgs[pos].classList.add("active");
+}
+})
+// setInterval(auto, 1000);
+
+// function position() {
+//     var pos;
+//     img.forEach((dot, i) => {
+        
+//         if (img[i].className === "active") {
+//             pos = i;
+//         }
+//     });
+//     return pos;
+// }
+
+// function auto() {
+//     // let pos = position();
+//     let pos = 2;
+//     pos = pos + 1;
+//     if (pos >= count) {
+//         pos = 0;
+//     } else {
+//         pos = pos;
+//     }
+//     img.forEach((dot, i) => {
+//         img[i].classList.remove("active");
+//     });
+//     img[pos].classList.add("active");
+// }

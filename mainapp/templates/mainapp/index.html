@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 
 <head>
@@ -8,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Himalayan Yeti Foundation</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'img\favicon.ico' %}">
 </head>
@@ -54,171 +54,29 @@
         </div>
     </section>
 
-    <!-- problems -->
-    <section class="section problems">
-        <div class="container">
-            <div class="row">
-                <div class="tabs">
-                    <div class="tab" id="tab1">
-                        <h3>Problems of Today</h3>
-                        <div class="subpoints">
-                            <div class="block" id="pot1">
-                                <img src="{% static 'img/pot1.jpg' %}" alt="">
-                                <ul>
-                                    <li>According to a report by Down to Earth, 5.7% of the senior citizens in India
-                                        lives alone
-                                    </li>
-                                    <li>One of the major reason of elderly living alone is lack of working opportunities
-                                        in the hometowns, especially rural</li>
-                                </ul>
-                            </div>
-                            <div class="block" id="pot2">
-                                <img src="{% static 'img/pot2.jpg' %}" alt="">
-                                <ul>
-                                    <li>According to India Skills Report 2022 by Wheebox, only 48.7% of total youth in
-                                        India is employable
-                                    </li>
-                                    <li>75% of companies surveyed reported a skill gap in the industry</li>
-                                </ul>
-                            </div>
-                            <div class="block" id="pot3">
-                                <img src="{% static 'img/pot3.jpg' %}" alt="">
-                                <ul>
-                                    <li>74% Indians suffering from stress, 88% from anxiety
-                                    </li>
-                                    <li>68.6% therapists reported an increase in the number of people they see on a
-                                        daily basis since covid-19 pandemic outbreak
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="block" id="pot4">
-                                <img src="{% static 'img/pot4.jpg' %}" alt="">
-                                <ul>
-                                    <li>Be it municipal waste, plastics or complex waste such as electronic, batteries,
-                                        etc., despite all the efforts in policy-making it still seems to be one of the
-                                        most challenging times of the Indian history
-                                    </li>
-                                    <li>According to a report by Niti Aayog, less than 20% of the waste is
-                                        treated/recycled in India
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab" id="tab2">
-                        <h3>Problems of Tomorrow</h3>
-                        <div class="subpoints">
-                            <div class="block" id="potom1">
-                                <img src="{% static 'img/potom1.jpg' %}" alt="">
-                                <ul>
-                                    <li>Lifestyle diseases are breaking all the age barriers, children way below the age
-                                        group of 20 are suffering from stress, immune disorders, heartache, blood
-                                        pressure, diabetes, etc.</li>
-                                    <li>Life expectancy in India is far below the global average, it stands at 69.66
-                                        years</li>
-                                </ul>
-                            </div>
-                            <div class="block" id="potom2">
-                                <img src="{% static 'img/potom2.jpg' %}" alt="">
-                                <ul>
-                                    <li>
-                                        More complex waste streams are emerging as the older technologies are becoming
-                                        obsolete, for instance, India started gearing up for solar and li-ion battery
-                                        recycling, though, technologies to 100% recycle them are not yet available
-                                    </li>
-                                    <li>It is estimated that complex waste will grow 30-fold in next 10 years</li>
-                                </ul>
-                            </div>
-                            <div class="block" id="potom3">
-                                <img src="{% static 'img/potom3.jpg' %}" alt="">
-                                <ul>
-                                    <li>It is estimated that 85% of the jobs that will exist in 2030 haven’t been
-                                        invented yet</li>
-                                    <li>Employee retention rate is too low and is falling. Companies are unable to spot
-                                        talent and even if they find, employees don’t stay
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="block" id="potom4">
-                                <img src="{% static 'img/potom4.jpg' %}" alt="">
-                                <ul>
-                                    <li>We are well aware of the depleting resources, not just that, there’s a urban
-                                        housing shortage of 54% which is ever-increasing</li>
-                                    <li>Flash floods happening in cities like Gurugram, Bangalore, Chennai, etc. More
-                                        than that it’s about traffic, pollution, stress on the urban infrastructure,
-                                        etc.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab" id="tab3">
-                        <h3>Problems that never fade out</h3>
-                        <div class="subpoints">
-                            <div class="block" id="ptnf1">
-                                <img src="{% static 'img/ptnfo1.jpg' %}" alt="">
-                                <ul>
-                                    <li>
-                                        By 2030, 50% of India’s population is expected to live in the urban cities
-                                        accelerating problems of overcrowding, housing, unemployment, squatter
-                                        settlement, transport, sewage, trash, drinking water, pollution, etc.
-                                    </li>
-                                    <li>
-                                        Migrant workers in urban India faces several issues in searching employment,
-                                        companies exploit them in wages, insurances etc. and most often they end up in
-                                        debts due to high cost of living, etc. </li>
-                                </ul>
-                            </div>
-                            <div class="block" id="ptnf2">
-                                <img src="{% static 'img/ptnfo2.jpg' %}" alt="">
-                                <ul>
-                                    <li>Indian Government is working well in order to design policies (such as extended
-                                        producers responsibility, corporate social responsibility, logistics, UPI, etc.
-                                        but implementation of it in a country like India is a tedious task due to
-                                        various known factors
-                                    </li>
-                                    <li>Lack of resources and lobbying by the powerful corporate houses is another big
-                                        challenge in good governance
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- separator -->
-    <!-- <div class="line">
-    </div> -->
-
     <!-- latest section -->
-    <section class="section latest">
+    <section class="section latest" id="latesthome">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section-title text-center">
-                        <span class="heading">Latest Events</span>
-                        <!-- <h2 class="mt-3 mb-4 position-relative content-title">Lorem ipsum dolor sit.</h2> -->
-                        <!-- <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, maxime earum
-                            rem eos dolor voluptates!</p> -->
+                        <span class="heading">The Latest</span>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                {% for event in eventlist %}
 
+
+                {% for event in eventlist %}
                 <div class="col-lg-4">
                     <div class="card mb-3 cause-item">
                         <div class="row no-gutters">
+                            <!-- <div class="slideshow"> -->
                             <img src="{{event.headerimage.url}}" class="img-fluid w-100" alt="...">
-
-                            <!-- youtube iframem -->
-                            <!-- <iframe class="video" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1"
-                            frameborder="0" allowfullscreen></iframe> -->
-
+                            <!-- <img src="https://himalayanyeti.org/static/img/corrupt.jpg"
+                                    class="img-fluid w-100 slide" alt="..."> -->
+                            <!-- </div> -->
                             <div class="card-body">
                                 <h3 class="mb-3">{{event.title}}</h3>
                                 <p class="card-text mb-4">{{ event.body|safe }}</p>
@@ -233,11 +91,15 @@
                                             class="material-icons">delete</span></a>
                                 </div>
                                 {% endif %}
+
                             </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
+
+
+
 
             </div>
 
@@ -253,8 +115,7 @@
                                     click on subscribe button.</h3>
                                 <form method="post">
                                     {% csrf_token %}
-                                    <input type="email" placeholder="Enter your Email" class="input-email"
-                                        name="scrubmail">
+                                    <input type="email" placeholder="Enter your Email" class="input-email">
 
                                     <button type="submit" class="btn btn-main rounded">Subscibe</button>
                                 </form>
@@ -263,11 +124,180 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </section>
 
+
+    <!-- separator -->
+    <div class="line">
+    </div>
+
+    <!-- united -->
+    <section class="section united">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title text-center">
+                        <span class="heading">What United Us?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img/bureaucracy.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Failed Bureaucracy</h1>
+                    </div>
+                    <div class="details">
+                        <p>Former US President Mr. Obama in his book wrote about India's bureaucracy as an impediment in
+                            its progress: “Despite its genuine economic progress, though, India remained a chaotic and
+                            impoverished place: largely divided by religion and caste, captive to the whims of corrupt
+                            local
+                            officials and power brokers, hamstrung by a parochial bureaucracy that was resistant to
+                            change.”
+                            As a country, we don't want anyone's feedback on our bureaucracy and governance but the fact
+                            is
+                            that despite after 75 years of Independence:</p>
+                        <ol>
+                            <li>1. Our bureaucrats remain corrupt, for instance, in Municipalities or any government
+                                office,
+                                until and unless you don't pay under the table, you will not be allotted a tender or
+                                your work
+                                will not be done.</li>
+                            <li>2. The RFPs/RFQs and EOIs that is being floated are generally designed by the
+                                influential
+                                people, organizations and institutions that creates an entry barrier for smaller but
+                                skilled
+                                organizations and teams.</li>
+                            <li>3. There is a huge gap between the skills and understanding of latest technologies,
+                                subjects
+                                etc. among these bureaucrats.
+                                India needs a robust bureaucratic and governance mechanism so that policies can be
+                                implemented
+                                in a sound-manner on-ground.
+                                HYF founding members faced immense issues while dealing with the low and mid-level
+                                employees in
+                                the government due to their laid-back approach and minimal understanding of various
+                                challenges
+                                that the entire CSR, ESG, or other industries are facing.</li>
+                        </ol>
+                    </div>
+                    <div class="btn readmore">
+                        <a>Read More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img/corrupt.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Corrupt Ecosystem</h1>
+                    </div>
+                    <div class="details">
+                        <p>Not just the Government offices or bureaucrats but in-general corruption has become a major
+                            issue in almost all the facets of life and businesses, for instance, professionals working
+                            in the impact industry, certification and compliances industry, etc. are the role models for
+                            the future generations but what if they start taking bribe to provide you certifications
+                            without even implementing the best practices. Whom would you trust then? An organization?
+                            Its processes? Or a piece of paper in a form of certificate?</p>
+                        <p>
+                            The trading mindset that India have given this corrupt ecosystem higher wings, no one wants
+                            to put that extra efforts to realize value and potential from a product (or a waste
+                            material/resource), but everyone is busy trading it for minimal but easy
+                            margins/commissions, etc. They are the masters of bill trading, and compliments this corrupt
+                            system amazingly.</p>
+                        <p>
+                            We at HYF if won’t be able to fight with them, at least we will safeguard ourselves and will
+                            not compromise our ethics for business, as for us it is not business but a sustainable and
+                            scalable impact.</p>
+                    </div>
+                    <div class="btn readmore">
+                        <a>Read more</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img/enthusiasm.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Enthusiasm for Impact</h1>
+                    </div>
+                    <div class="details">
+                        <p>Believe it or not, but the founding members of HYF are crazy about the impact that they can
+                            create, for instance, Shivam Batra (co-founder HYF), left his well-paid job in Africa, moved
+                            to Milan, Italy to pursue MBA (International Sustainable and Circular Businesses), after
+                            which he decided to move to India to actually create viable impact rather than staying in
+                            Europe and working there.</p>
+                        <p>
+                            Shivam Batra since then has been working on-ground and managing complex projects related to
+                            ESG, EPR, Circular Economy, CSR, etc. and is a well-known face in the Indian waste
+                            management and recycling industry. He is a keynote speaker and delivers world-class lectures
+                            on the above-mentioned subjects.</p>
+                        <p>
+                            He is one such example in HYF, our entire team is formulated based upon hunger to make
+                            change, we don’t believe in number of years of experience, but seconds/minutes and hours of
+                            impact a person in her or his life has created.</p>
+                        <p>
+                            Read more about our team and the Impact that we created since we started our journey as a
+                            foundation for impact!</p>
+                    </div>
+                    <div class="btn readmore">
+                        <a>read more</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img">
+                        <img src="{% static 'img/esg.jpg' %}" alt="">
+                    </div>
+                    <div class="title">
+                        <h1>Alarming ESG Issues</h1>
+                    </div>
+                    <div class="details">
+                        <p>This is something that needs no explanation, but, more than the issues we should be focussing
+                            on identifying right solutions and skills to solve it. The problems that we see in matters
+                            related to ESG are:</p>
+                        <ol>
+                            <li>
+                                1. Most of the investors/businesses are focussing on seeing sustainability from a
+                                macro-lens, i.e., carbon emissions, water footprints, packaging related issues, social
+                                benefits for the workers, etc. A very crucial “G” i.e., Governance is something that is
+                                being left behind among all the “E” Environmental and “S” Social Issues.
+                            </li>
+                            <li>
+                                2. Quite often professionals are confused among corporate social responsibility i.e.,
+                                CSR, and ESG and or Circular Economy initiatives, and they club them together. CSR and
+                                Sustainability should be seen very differently as sustainable initiatives are something
+                                that should be taken across the value-chain in the operations (be it downstream,
+                                mid-stream or upstream).
+                            </li>
+                            <li>
+                                3. The skills required to solve such complex issues are still developing and lot of
+                                young people are entering into this side of the business, but again the level of
+                                understanding and maturity that is required to solve these issues, is still not there.
+                            </li>
+                            <li>
+                                4. Most of the senior-management people comes from either communications or PR/Marketing
+                                background thus, making it a greenwashing and branding exercise rather than the actual
+                                impact.
+                            </li>
+                        </ol>
+                        <p>HYF was born because of such issues and we believe we would be able to solve each one of them
+                            in the projects we do and the collaborations/partnerships we make in the future.</p>
+                    </div>
+                    <div class="btn readmore">
+                        <a>read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -304,10 +334,10 @@
 
                         <ul class="list-unstyled footer-menu lh-35">
                             <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                            <li><a href="#">Blogs</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="csr.html#logosection">Partners</a></li>
+                            <li><a href="{% url 'help' %}">Blogs</a></li>
+                            <li><a href="index#latesthome">Events</a></li>
+                            <li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+                            <li><a href="csr#logosection">Partners</a></li>
                             <li><a href="#">SDG</a></li>
                             {% if user.is_authenticated %}
                             <li><a href="{% url 'createuser' %}">Create User</a></li>
@@ -329,7 +359,10 @@
         </div>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
+
 </body>
 
 </html>
